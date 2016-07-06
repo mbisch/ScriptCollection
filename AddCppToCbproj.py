@@ -147,7 +147,7 @@ class AddItemToProject():
         config_elments += [{'Name': 'FileTree', 'Type': 'FileList', 'Label': 'Source/Lib', 'Show': '', 'Expandable': True,'FileTypes': '*.cpp;*.lib', 'Var': self.incl_cpp}]
         self.sr.add_elements(title='Config', elements=config_elments, new_pane=True, expand=True)
         config_elments = [{'Name': 'FileTree', 'Type': 'FileList', 'Label': 'Project Files', 'Show': '', 'Expandable': True, 'FileTypes': '*.cbproj', 'Var': self.projs}]
-        self.sr.add_elements(title='Config', elements=config_elments, new_pane=True, expand=True)
+        self.sr.add_elements(title=None, elements=config_elments, new_pane=True, expand=True)
 
         action_elements = []
         action_elements += [{'Name': 'Run1', 'Type': 'Action', 'Label': None, 'Action': 'Run Script', 'Function': self.Run, 'StdoutName': 'TextPad', 'OutQueue' : self.txt_queue}]

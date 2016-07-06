@@ -407,10 +407,10 @@ class ScriptRunner(tk.Tk):
                     W = DirectoryNameEntry(left=frames[0], right=frames[1], element=ele)
                 elif ele['Type'] == 'FileList':
                     W = FileDirTree(frame=frames[0], element=ele, is_file = True)
-                    add_minheigth = 130
+                    add_minheigth = 160
                 elif ele['Type'] == 'DirList':
                     W = FileDirTree(frame=frames[0], element=ele, is_file = False)
-                    add_minheigth = 100
+                    add_minheigth = 90
                 elif ele['Type'] == 'Action':
                     W = ActionButton(frame=frames[0], element=ele, stdouts = self.stdouts)
 
@@ -420,15 +420,15 @@ class ScriptRunner(tk.Tk):
                 if add_minheigth == 0:
                     add_minheigth = frames[0].winfo_height()
                 self.minheigth += add_minheigth
-
+        print(self.minheigth)
         self.panedw.paneconfigure(pane, minsize=self.minheigth)
 
 
 
     def add_textpad(self, name, title):
-        lf = self.addPanel(self.panedw, title,minsize =100,new_pane = True)
+        lf = self.addPanel(self.panedw, title,minsize =70,new_pane = True)
 
-        self.textPad = tk.Text(lf, width=100, height=100, state = 'disabled')
+        self.textPad = tk.Text(lf, state = 'disabled')
         self.ysb = ttk.Scrollbar(lf, orient='vertical', command=self.textPad.yview)
         self.textPad.configure(yscroll=self.ysb.set)
         self.stdouts[name] = self.textPad
