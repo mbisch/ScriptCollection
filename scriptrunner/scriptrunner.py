@@ -410,7 +410,7 @@ class ScriptRunner(tk.Tk):
                     add_minheigth = 130
                 elif ele['Type'] == 'DirList':
                     W = FileDirTree(frame=frames[0], element=ele, is_file = False)
-                    add_minheigth = 130
+                    add_minheigth = 100
                 elif ele['Type'] == 'Action':
                     W = ActionButton(frame=frames[0], element=ele, stdouts = self.stdouts)
 
