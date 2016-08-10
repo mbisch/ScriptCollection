@@ -1,0 +1,280 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-04 11:36:35)
+Start directory: C:\Projects\SunGard\sungard\windekis\Genix
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescKundenDokumenteHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescKundenDokumenteZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescPortfolioHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescPortfolioZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source\dbdesc.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source\DbDescProzessMgrStandalone.cpp - 1673 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Versandmgr\Source\DbDescDataExchange.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Versandmgr\Source\DbDescHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDESC.CPP - 10 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdmin.cpp - 4729 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdminHistory.cpp - 1981 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdminZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdminZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdresse.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdresseHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdresseZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAdresseZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAkte.cpp - 421 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAkteHistory.cpp - 129 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAkteZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescAkteZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescApsys.cpp - 561 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescApsysFinanceData.cpp - 187 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescApsysFinanceDataZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescApsysInterface.cpp - 36 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescApsysInterfaceZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescApsysZusatz.cpp - 3 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescArchivInstanz.cpp - 723 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescArchivInstanzZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescCommon.cpp - 3580 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescCubis.cpp - 442 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescCubisZusatz.cpp - 3 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescDataExchange.cpp - 154 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescErtraegnis.cpp - 541 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescEServices.cpp - 126 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescEUTaxReporting.cpp - 32 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescExterneQuellen.cpp - 33 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescFatca.cpp - 125 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescFatcaZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescFinFoxImport.cpp - 157 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescHistory.cpp - 1691 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescInvestmentResearch.cpp - 106 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescInvestmentResearchHistory.cpp - 57 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescJava.cpp - 12 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescJavaZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescJob.cpp - 46 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescJobZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKreditkarte.cpp - 99 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKreditkarteHistory.cpp - 98 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKreditkarteZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKreditkarteZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKunde.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKundeHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKundendokumente.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKundendokumenteHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKundendokumenteZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKundendokumenteZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKundeZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescKundeZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMigAdressPlus.cpp - 278 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMigApsys.cpp - 259 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMigArchiv.cpp - 21 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMigArchivZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMigAvaloq.cpp - 127 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMitarbeiter.cpp - 543 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMitarbeiterHistory.cpp - 523 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMitarbeiterZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescMitarbeiterZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescNameSplit.cpp - 11 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescNameSplitZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescObjectField.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescObjectTable.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescObjectUtils.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPartner.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPartnerdokumente.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPartnerdokumenteZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescPartnerDubletten.cpp - 18 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescPartnerDublettenZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPartnerHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPartnerZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPartnerZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPortfolio.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPortfolioHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPortfolioZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescPortfolioZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescProject.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescProjectHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescProjectSequenz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescProjectZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescProjectZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescProjectZusatzSequenz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbdescQFlagInclude.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescReportingPrudentiel.cpp - 51 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescRms.cpp - 287 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescRmsZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescSchliessfach.cpp - 94 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescSchliessfachHistory.cpp - 113 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescSchliessfachZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescSchliessfachZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescSQLStr.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescTempTables.cpp - 241 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescTempTablesZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescUETaxReporting.cpp - 5 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescVoIp.cpp - 44 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescVoIpZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescVvMonitor.cpp - 183 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescVvMonitorHistory.cpp - 28 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescWinDekisIIHistory.cpp - 310 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescWinDekisIIZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescWorldCheck.cpp - 242 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescZusatzCommon.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescZusatzDataExchange.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescZusatzEUTaxReporting.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescZusatzReportingPrudentiel.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DBDescZusatzWorldCheck.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\Versandmgr\Source\DbDescDataExchange.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\Versandmgr\Source\DbDescHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\dbdesc.cpp - 4 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescAdmin.cpp - 1333 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescAdminHistory.cpp - 1176 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescCommon.cpp - 1579 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescHistory.cpp - 465 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescMitarbeiter.cpp - 146 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescMitarbeiterHistory.cpp - 122 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescObjectField.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescObjectTable.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescObjectUtils.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescProject.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbdescQFlagInclude.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescSQLStr.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescWorldCheck.cpp - 143 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxCheckDbDescDB.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxCheckDbDescHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDesc.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescAdmin.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescDual.cpp - 23 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescFeldSettings.cpp - 24 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescFeldSettingsHistory.cpp - 20 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxAdminFieldList.cpp - 62 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxAudit.cpp - 189 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxCharConvertMap.cpp - 9 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDbJobs.cpp - 20 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDbLinks.cpp - 8 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDbMviews.cpp - 31 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDid.cpp - 172 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxFeldHilfe.cpp - 13 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxFieldmapping.cpp - 70 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxLog.cpp - 33 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxMapi.cpp - 65 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxMisList.cpp - 126 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxNotifications.cpp - 52 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxPropertyObject.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxPropertyObjectHistory.cpp - 15 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxProzess.cpp - 19 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxStapelScanning.cpp - 39 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxUd.cpp - 202 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObject.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObjectField.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObjectTable.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObjectUtils.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSignatureSettings.cpp - 13 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSignatureSettingsHistory.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSQLStr.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSys_context.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzAdmin.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzDual.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzFeldHilfe.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzFeldSettings.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzFeldSettingsHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxAdminFieldList.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxAudit.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxCharConvertMap.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDbJobs.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDbLinks.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDbMviews.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDid.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxFieldmapping.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxLog.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxMapi.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxMisList.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxNotifications.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxPropertyObject.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxPropertyObjectHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxProzess.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxStapelScanning.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxUd.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzSignatureSettings.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzSignatureSettingsHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzSys_context.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\Administrator\Source\DbDescDataExchange.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\Administrator\Source\DbDescHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\Administrator\Source\DbDescMarketing.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DBDESC.CPP - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAdmin.cpp - 1469 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAdminHistory.cpp - 799 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAdminZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAdresse.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAdresseHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAdresseZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAdresseZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAkte.cpp - 166 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAkteHistory.cpp - 81 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAkteZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescAkteZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DBDescArchivInstanz.cpp - 133 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescCommon.cpp - 1429 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescCubis.cpp - 439 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescDataExchange.cpp - 108 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescHistory.cpp - 312 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescInvestmentResearch.cpp - 102 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DBDescInvestmentResearchHistory.cpp - 55 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescKunde.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescKundendokumente.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescKundendokumenteHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescKundendokumenteZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescKundendokumenteZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMarketing.cpp - 331 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMarketingHistory.cpp - 99 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMarketingZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMarketingZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMitarbeiter.cpp - 290 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMitarbeiterHistory.cpp - 232 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMitarbeiterZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescMitarbeiterZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescObjectField.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescObjectTable.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescObjectUtils.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPartner.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DBDescPartnerDubletten.cpp - 19 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPartnerDublettenZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPartnerHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPartnerZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPartnerZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPortfolio.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPortfolioHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPortfolioZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescPortfolioZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescProject.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescProjectHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescProjectSequenz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescProjectZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescProjectZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescProjectZusatzSequenz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbdescQFlagInclude.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescSchliessfach.cpp - 54 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescSchliessfachHistory.cpp - 65 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescSQLStr.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DBDescTermin.cpp - 42 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescWinDekisIIHistory.cpp - 309 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescWinDekisIIZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DBDescWorldCheck.cpp - 109 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescZusatzCommon.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescZusatzDataExchange.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DbDescZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source\DBDescZusatzWorldCheck.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\Dbdesc.cpp - 4561 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescAkteHistory.cpp - 83 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescAML.cpp - 366 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescAMLExtTrans.cpp - 121 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DBDescArchivInstanz.cpp - 870 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescFatca.cpp - 95 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescHistory.cpp - 983 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescObjectField.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescObjectTable.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescObjectUtils.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DBDescPartnerDubletten.cpp - 12 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescProjectSequenz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescSQLStr.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DbDescWebServices.cpp - 652 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\NCWARE32\WinDekis\Source\DBDescWorldCheck.cpp - 83 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\Sql\GenDBDesc\dbdesc.cpp - 13 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\Sql\GenDBDesc\dbdesc_zusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\Tools\QT_Devil\ODBMapper\windekisdbdescstructfile.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\Tools\QT_Devil\ODBMapper\windekisdbdescstructure.cpp - No change

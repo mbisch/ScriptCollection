@@ -1,0 +1,3 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-04 12:31:39)
+File: C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescDual.cpp
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescDual.cpp - 23 lines replaced

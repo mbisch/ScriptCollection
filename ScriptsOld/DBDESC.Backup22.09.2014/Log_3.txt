@@ -1,0 +1,61 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-07 09:38:29)
+Start Directory: C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxCheckDbDescDB.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxCheckDbDescHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDesc.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescAdmin.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescDual.cpp - 23 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescFeldSettings.cpp - 24 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescFeldSettingsHistory.cpp - 20 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxAdminFieldList.cpp - 62 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxAudit.cpp - 189 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxCharConvertMap.cpp - 9 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDbJobs.cpp - 20 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDbLinks.cpp - 8 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDbMviews.cpp - 31 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxDid.cpp - 172 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxFeldHilfe.cpp - 13 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxFieldmapping.cpp - 70 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxLog.cpp - 33 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxMapi.cpp - 65 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxMisList.cpp - 126 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxNotifications.cpp - 52 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxPropertyObject.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxPropertyObjectHistory.cpp - 15 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxProzess.cpp - 19 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxStapelScanning.cpp - 39 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescGxUd.cpp - 202 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObject.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObjectField.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObjectTable.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescObjectUtils.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSignatureSettings.cpp - 13 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSignatureSettingsHistory.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSQLStr.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescSys_context.cpp - 16 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzAdmin.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzDual.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzFeldHilfe.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzFeldSettings.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzFeldSettingsHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxAdminFieldList.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxAudit.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxCharConvertMap.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDbJobs.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDbLinks.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDbMviews.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxDid.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxFieldmapping.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxLog.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxMapi.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxMisList.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxNotifications.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxPropertyObject.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxPropertyObjectHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxProzess.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxStapelScanning.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzGxUd.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzSignatureSettings.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzSignatureSettingsHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE\GxDbDescZusatzSys_context.cpp - No change

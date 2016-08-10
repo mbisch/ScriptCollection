@@ -1,0 +1,10 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-07 09:56:19)
+Start Directory: C:\Projects\SunGard\sungard\windekis\Genix\ApWare32
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescKundenDokumenteHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescKundenDokumenteZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescPortfolioHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Administrator\Source\DBDescPortfolioZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source\dbdesc.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source\DbDescProzessMgrStandalone.cpp - 1673 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Versandmgr\Source\DbDescDataExchange.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\Versandmgr\Source\DbDescHistory.cpp - No change

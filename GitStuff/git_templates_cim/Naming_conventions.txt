@@ -1,0 +1,69 @@
+##################################################################################################################
+#                                                                                                                #
+#  Naming conventions for tags and branches                                                                      #
+#  ========================================                                                                      #
+#                                                                                                                #
+#  Tags:                                                                                                         #
+#  -----                                                                                                         #
+#     - windekis repository: <project_name>-v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+_b[0-9]+-?.*                          #
+#       => examples:                                                                                             #
+#          - credit-suisse-v1.3.0.0_b0-NameCheck                                                                 #
+#          - weg-v3.87.46.1_b0-Any_text_without_spaces                                                           #
+#                                                                                                                #
+#     - sql repository: v[0-9]+\.[0-9]+\.[0-9]+_b[0-9]+-?.*                                                      #
+#       => examples:                                                                                             #
+#          - v1.3.0_b0-NameCheck                                                                                 #
+#          - v3.87.46_b0-Any_text_without_spaces                                                                 #
+#                                                                                                                #
+#   Branches:                                                                                                    #
+#   ---------                                                                                                    #
+#     - Personal branches: dev/developer_name/Name                                                               #
+#       => examples:                                                                                             #
+#          - dev/markus_bischofberger/merge_dbdesc                                                               #
+#                                                                                                                #
+#     - Bugfix branches: bugfix/<project_name>/Name                                                              #
+#       Name is free but it's recommended to use the version of the tag on which the branch is created           #
+#       => examples:                                                                                             #
+#          - bugfix/weg/3.87.53.2_b0                                                                             #
+#                                                                                                                #
+#                                                                                                                #
+#   List of allowed project names                                                                                #
+#   -----------------------------                                                                                # 
+#                                                                                                                #
+#   - ansbacher                                                                                                  #
+#   - apobank                                                                                                    #
+#   - arab                                                                                                       #
+#   - bab                                                                                                        #
+#   - bbb                                                                                                        #
+#   - bbva                                                                                                       #
+#   - berenberg                                                                                                  #
+#   - bes                                                                                                        #
+#   - bhf                                                                                                        #
+#   - bil                                                                                                        #
+#   - bov                                                                                                        #
+#   - bwl                                                                                                        #
+#   - credit-suisse                                                                                              #
+#   - deltec                                                                                                     #
+#   - fidu                                                                                                       #
+#   - goncim                                                                                                     #
+#   - gutzwiller                                                                                                 #
+#   - hiv                                                                                                        #
+#   - jceh                                                                                                       #
+#   - lbbw                                                                                                       #
+#   - lblux                                                                                                      #
+#   - lgt                                                                                                        #
+#   - macie                                                                                                      #
+#   - metropol                                                                                                   #
+#   - morval                                                                                                     #
+#   - nhb                                                                                                        #
+#   - nomura                                                                                                     #
+#   - pbihag                                                                                                     #
+#   - pib                                                                                                        #
+#   - piguet-galland                                                                                             #
+#   - pkb                                                                                                        #
+#   - rbl                                                                                                        #
+#   - selvi                                                                                                      #
+#   - vbv                                                                                                        #
+#   - weg                                                                                                        #
+#                                                                                                                #
+##################################################################################################################

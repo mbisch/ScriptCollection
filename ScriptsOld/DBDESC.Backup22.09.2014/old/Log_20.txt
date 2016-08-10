@@ -1,0 +1,4 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-04 15:32:35)
+Start Directory: C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source\dbdesc.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source\DbDescProzessMgrStandalone.cpp - 1673 lines replaced

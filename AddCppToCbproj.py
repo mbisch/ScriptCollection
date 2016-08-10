@@ -37,7 +37,8 @@ class AddItemToProject():
     def ModifyProj(self,XmlTree,file):
         root = XmlTree.getroot()
         ns = root.tag[:root.tag.find('Project')]
-
+        file_path = os.path.split(file)[0]
+        
         maxbuildorder = 0;
 
         for fld in root.iter(ns + 'BuildOrder'):
@@ -49,7 +50,7 @@ class AddItemToProject():
         incl_order_nr = maxbuildorder
 
         for cpp in self.incl_cpp:
-            rel_cpp_path = os.path.relpath(cpp,file)
+            rel_cpp_path = os.path.relpath(cpp,file_path)
 
             found = False
             for fld in root.iter(ns + 'CppCompile'):
@@ -71,7 +72,7 @@ class AddItemToProject():
         # Include Path
         for inc_dir in self.incl_header:
 
-            rel_include_path = os.path.relpath(inc_dir,file)
+            rel_include_path = os.path.relpath(inc_dir,file_path)
             rel_include_path = rel_include_path.rstrip('\\') + '\\'
 
             for fld in root.iter(ns + 'IncludePath'):

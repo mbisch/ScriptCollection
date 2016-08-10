@@ -1,0 +1,3 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-04 12:25:59)
+File: C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescCommon.cpp
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\DbDescCommon.cpp - 3580 lines replaced

@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+# 1. call user hooks *.local
+# 2. call common hook (python) in cim_common
+
+import sys, os, locale
+from subprocess import Popen,PIPE,STDOUT
+
+from cim_common.update_common import *
+from cim_common.which import *
+
+def is_exe(fpath):
+   return os.path.isfile(fpath) and os.access(fpath, os.X_OK)
+        
+def main(argv):
+   file_name  = os.path.basename(__file__)+'.local'
+   dirname = os.path.dirname(os.path.relpath(__file__))
+   local_hook = os.path.join(dirname, file_name)
+   local_hook = local_hook.replace('\\','/')
+   
+   """ Check if *.local bash script exists """
+   if is_exe(local_hook):
+      sh_exe = which('sh.exe')
+      if sh_exe == None:
+         sh_exe = which('C:\Program Files\Git\bin\sh.exe')
+      if sh_exe == None:
+         sh_exe = which('C:\Program Files (x86)\Git\bin\sh.exe')      
+            
+      if sh_exe != None:     
+         proc = Popen([sh_exe,'--login','-c','--',local_hook]+argv, shell=False, stdout=PIPE)
+         proc.wait()
+         encoding = locale.getdefaultlocale()[1]
+         print((proc.communicate()[0]).decode(encoding))
+      
+         if proc.returncode != 0:
+            print('rejected by local hook')
+            sys.exit(proc.returncode)            
+      else:
+         print('sh.exe (.../Git/bin) not found')
+         
+   sys.exit(update_common(argv))
+              
+if __name__ == "__main__":
+   main(sys.argv[1:])

@@ -1,0 +1,8 @@
+Add Zusatz to *DBDESC*.CPP files (2014-09-26 13:14:40)
+Start Directory: C:\Users\markus.bischofberger\Desktop\MergeDBDESC
+C:\Users\markus.bischofberger\Desktop\MergeDBDESC\DbDescAdmin.cpp - 5026 lines replaced
+C:\Users\markus.bischofberger\Desktop\MergeDBDESC\DbDescAdminZusatz.cpp - No change
+C:\Users\markus.bischofberger\Desktop\MergeDBDESC\DbDescCommon.cpp - 3763 lines replaced
+C:\Users\markus.bischofberger\Desktop\MergeDBDESC\DbDescEBanking.cpp - 36 lines replaced
+C:\Users\markus.bischofberger\Desktop\MergeDBDESC\DbDescZusatzCommon.cpp - No change
+C:\Users\markus.bischofberger\Desktop\MergeDBDESC\DbDescZusatzEBanking.cpp - No change

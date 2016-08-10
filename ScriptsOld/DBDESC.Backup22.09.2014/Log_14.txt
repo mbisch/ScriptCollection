@@ -1,0 +1,22 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-07 10:19:09)
+Start Directory: C:\Projects\SunGard\sungard\windekis\PKB
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescAdresse.cpp - 8 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescAdresseZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescKunde.cpp - 30 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescKundeHistory.cpp - 36 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescKundeZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescKundeZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPartner.cpp - 22 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPartnerHistory.cpp - 17 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPartnerZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPartnerZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPortfolio.cpp - 6 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPortfolioHistory.cpp - 5 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPortfolioZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescPortfolioZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescProject.cpp - 139 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescProjectHistory.cpp - 79 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescProjectSequenz.cpp - 4 lines replaced
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescProjectZusatz.cpp - No change
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescProjectZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungard\windekis\PKB\Windekis\WinDekis\Source\DbDescProjectZusatzSequenz.cpp - No change

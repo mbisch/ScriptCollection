@@ -1,0 +1,2 @@
+Add Zusatz to *DBDESC*.CPP files (2014-09-24 10:25:26)
+Start Directory: C:\Projects\other\Scripts\DBDESC\SRC

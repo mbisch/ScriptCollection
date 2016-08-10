@@ -1,0 +1,6 @@
+Add Zusatz to *DBDESC*.CPP files (2014-10-01 06:40:52)
+Start Directory: .
+.\DbDescKunde.cpp - 32 lines replaced
+.\DbDescKundeZusatz.cpp - 2 lines replaced
+.\SRC\DbDescKunde.cpp - 32 lines replaced
+.\SRC\DbDescKundeZusatz.cpp - 2 lines replaced

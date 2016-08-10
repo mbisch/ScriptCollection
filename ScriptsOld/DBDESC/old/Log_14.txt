@@ -1,0 +1,10 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-04 13:00:30)
+Start Directory: C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescKunde.cpp - 3 lines replaced
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescKundeHistory.cpp - 3 lines replaced
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescPartner.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescPartnerHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescPortfolio.cpp - 8 lines replaced
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescPortfolioHistory.cpp - 8 lines replaced
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescProject.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source\DbDescProjectHistory.cpp - 2 lines replaced

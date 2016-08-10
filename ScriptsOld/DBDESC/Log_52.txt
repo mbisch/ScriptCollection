@@ -1,0 +1,5 @@
+Add Zusatz to *DBDESC*.CPP files (2014-10-01 07:44:53)
+Start Directory: .
+.\DbDescKunde.cpp - 32 lines replaced
+.\DbDescKundeZusatz.cpp - 2 lines replaced
+.\SRC\DBDescEUTaxReporting.cpp - 34 lines replaced

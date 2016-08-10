@@ -1,0 +1,38 @@
+Add Zusatz to *DBDESC*.CPP files (2014-09-30 16:06:45)
+Start Directory: C:\Projects\SunGard\sungardTest\windekis
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescKunde.cpp - 11 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescKundeHistory.cpp - 9 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescKundeZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescKundeZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPartner.cpp - 19 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPartnerHistory.cpp - 17 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPartnerZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPartnerZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPortfolio.cpp - 7 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPortfolioHistory.cpp - 5 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPortfolioZusatz.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescPortfolioZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescProject.cpp - 34 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescProjectHistory.cpp - 14 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescProjectSequenz.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescProjectZusatz.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescProjectZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\AMBIT_CIM\Windekis\WinDekis\Source\DbDescProjectZusatzSequenz.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescAdresse.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescAdresseHistory.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescAdresseZusatz.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescAdresseZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescKunde.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescKundeHistory.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescKundeZusatz.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescKundeZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescPartner.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescPartnerHistory.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescPartnerZusatz.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\Ansbacher_Nassau\Windekis\WinDekis\Source\DbDescPartnerZusatzHistory.cpp - No change
+C:\Projects\SunGard\sungardTest\windekis\BBB\Windekis\WinDekis\Source\DbDescPartner.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\BBB\Windekis\WinDekis\Source\DbDescPartnerHistory.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\BBB\Windekis\WinDekis\Source\DbDescPartnerZusatz.cpp - 2 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\BBB\Windekis\WinDekis\Source\DbDescPartnerZusatzHistory.cpp - 2 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\BBVA\Windekis\WinDekis\Source\DbDescPartner.cpp - 3 lines replaced
+C:\Projects\SunGard\sungardTest\windekis\BBVA\Windekis\WinDekis\Source\DbDescPartnerZusatz.cpp - 2 lines replaced

@@ -1,0 +1,7 @@
+C:\Projects\SunGard\sungard\windekis\Weg\Windekis\WinDekis\Source
+C:\Projects\SunGard\sungard\windekis\Genix\GXWARE32\SOURCE
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source
+
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\ProzessMgr\Source
+C:\Projects\SunGard\sungard\windekis\Genix\MxWare32\RMS\Source

@@ -1,0 +1,4 @@
+Add Zusatz to *DBDESC*.CPP files (2014-09-24 10:15:46)
+Start Directory: C:\Projects\other\Scripts\DBDESC\SRC
+C:\Projects\other\Scripts\DBDESC\SRC\DbDescKunde.cpp - 32 lines replaced
+C:\Projects\other\Scripts\DBDESC\SRC\DbDescKundeZusatz.cpp - 4 lines replaced

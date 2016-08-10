@@ -1,0 +1,2 @@
+AModify CBPROJ files (2015-10-06 16:00:24)
+Start Directory: C:\Projects\SunGard\sungardIntegration\windekis\Credit-Suisse\Windekis\WinDekis

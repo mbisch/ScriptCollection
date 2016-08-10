@@ -1,0 +1,3 @@
+Add Zusatz to *DBDESC*.CPP files (2014-09-29 13:06:15)
+Start Directory: C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\FORMAT_TMP
+C:\Projects\SunGard\sungard\windekis\Genix\ApWare32\WinDekis\Source\FORMAT_TMP\DbDescAdmin.cpp - 5056 lines replaced

@@ -1,0 +1,2 @@
+AModify CBPROJ files (2015-10-23 12:47:42)
+Start Directory: C:\Projekte\windekis_src\sungardIntegration\windekis
