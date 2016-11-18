@@ -1,0 +1,276 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{026591D6-D2BB-4784-8270-027F8961ED08}</ProjectGuid>
+    <ProjectType>CppGuiApplication</ProjectType>
+    <Config Condition="'$(Config)'==''">Debug Build</Config>
+    <ProjectVersion>15.4</ProjectVersion>
+    <FrameworkType>None</FrameworkType>
+    <Base>True</Base>
+    <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    <TargetedPlatforms>1</TargetedPlatforms>
+    <AppType>Application</AppType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+    <Base_Win32>true</Base_Win32>
+    <CfgParent>Base</CfgParent>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+    <Base_Win64>true</Base_Win64>
+    <CfgParent>Base</CfgParent>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Debug Build' or '$(Cfg_1)'!=''">
+    <Cfg_1>true</Cfg_1>
+    <CfgParent>Base</CfgParent>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+    <Cfg_1_Win32>true</Cfg_1_Win32>
+    <CfgParent>Cfg_1</CfgParent>
+    <Cfg_1>true</Cfg_1>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+    <Cfg_1_Win64>true</Cfg_1_Win64>
+    <CfgParent>Cfg_1</CfgParent>
+    <Cfg_1>true</Cfg_1>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Release Build' or '$(Cfg_2)'!=''">
+    <Cfg_2>true</Cfg_2>
+    <CfgParent>Base</CfgParent>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+    <Cfg_2_Win32>true</Cfg_2_Win32>
+    <CfgParent>Cfg_2</CfgParent>
+    <Cfg_2>true</Cfg_2>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+    <Cfg_2_Win64>true</Cfg_2_Win64>
+    <CfgParent>Cfg_2</CfgParent>
+    <Cfg_2>true</Cfg_2>
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Base)'!=''">
+    <SanitizedProjectName>WinDekisXE2_TEST</SanitizedProjectName>
+    <UsingDelphiRTL>true</UsingDelphiRTL>
+    <IncludePath>..\..\..\Genix\ApWare32\common\include;..\..\..\Genix\GXWARE32\common\include;..\..\..\Genix\GxWare32\;$(CG_BOOST_ROOT)\boost\tr1\tr1;$(CG_BOOST_ROOT);..\..\..\Genix\GxWare32\VCL\;..\..\..\Genix\GxWare32\VCL\Comp\Code\;Include\;Resource\;Source\;..\..\..\genix\apware32\WinDekis\include;..\..\..\genix\apware32\WinDekis\Source\;..\..\..\Genix\ApWare32\Versandmgr\Source\;..\..\..\genix\gxware32\include;..\..\..\genix\gxware32\source\;$(IncludePath)</IncludePath>
+    <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+    <VerInfo_Locale>2055</VerInfo_Locale>
+    <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+    <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    <LinkPackageStatics>rtl.lib</LinkPackageStatics>
+    <AllPackageLibs>rtl.lib</AllPackageLibs>
+    <OutputExt>exe</OutputExt>
+    <DCC_Optimize>false</DCC_Optimize>
+    <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+    <ILINK_IntermediateOutputPath>OUT32</ILINK_IntermediateOutputPath>
+    <DCC_ObjPath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;$(DCC_ObjPath)</DCC_ObjPath>
+    <BCC_OutputDir>OUT32\</BCC_OutputDir>
+    <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+    <BRCC_OutputDir>OUT32\</BRCC_OutputDir>
+    <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+    <ILINK_AppType>Windows</ILINK_AppType>
+    <BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+    <ILINK_ObjectSearchPath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;$(ILINK_ObjectSearchPath)</ILINK_ObjectSearchPath>
+    <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+    <BCC_GenerateWindowsApp>true</BCC_GenerateWindowsApp>
+    <NoVCL>true</NoVCL>
+    <BCC_ZeroLengthEmptyMemberFuncs>true</BCC_ZeroLengthEmptyMemberFuncs>
+    <FinalOutputDir>out32\</FinalOutputDir>
+    <PackageImports>vcl.bpi;rtl.bpi;vclx.bpi;dbrtl.bpi;adortl.bpi;vcldb.bpi;dsnap.bpi;dsnap.bpi;dsnapcon.bpi;bdertl.bpi;vcldbx.bpi;bcboffice2k.bpi;bcbie.bpi;dbexpress.bpi;vclie.bpi;xmlrtl.bpi;inetdbbde.bpi;inet.bpi;inetdbxpress.bpi;dbxcds.bpi;bcbsmp.bpi;soaprtl.bpi;inetdb.bpi;ibxpress.bpi;indycore.bpi;indysystem.bpi;teeui.bpi;teedb.bpi;tee.bpi;$(PackageImports)</PackageImports>
+    <TASM_AdditionalSwitches> /w2 OUT32\</TASM_AdditionalSwitches>
+    <DCC_UnitSearchPath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+    <BCC_StackFrames>true</BCC_StackFrames>
+    <BCC_waus>false</BCC_waus>
+    <BCC_GenerateMultithreaded>true</BCC_GenerateMultithreaded>
+    <DCC_DcuOutput>OUT32\</DCC_DcuOutput>
+    <BCC_IntegerSizedEnums>false</BCC_IntegerSizedEnums>
+    <BRCC_IncludePath>include;Source;RESOURCE;Resource\English;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;$(BDS)\include;$(BDS)\include\windows\crtl;$(BDS)\include\windows\sdk;$(BRCC_IncludePath)</BRCC_IncludePath>
+    <TASM_IncludePath>RESOURCE\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;RESOURCE;..\..\..\Genix\GXWARE32\SOURCE;include;..\..\..\Genix\apware32\windekis\include;..\..\..\Genix\GXWARE32\include;$(BDS)\include;$(BDS)\include\vcl;$(TASM_IncludePath)</TASM_IncludePath>
+    <DCC_IncludePath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+    <BCC_IncludePath>include;$(BCC_IncludePath)</BCC_IncludePath>
+    <ILINK_LibraryPath>..\..\..\Genix\GxWare32\;..\..\..\Genix\GxWare32\VCL\Comp\Code\;..\..\..\Genix\GxWare32\VCL\;Include\;source\;Resource\;..\..\..\genix\apware32\WinDekis\Source\;..\..\..\Genix\ApWare32\Versandmgr\Source\;..\..\..\Genix\GXWARE32\SOURCE\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+    <BCC_ZeroLengthEmptyBaseClass>true</BCC_ZeroLengthEmptyBaseClass>
+    <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+    <Multithreaded>true</Multithreaded>
+    <DCC_ObjOutput>OUT32\</DCC_ObjOutput>
+    <TASM_Debugging>Full</TASM_Debugging>
+    <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+    <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+    <DCC_ResourcePath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;$(DCC_ResourcePath)</DCC_ResourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Base_Win32)'!=''">
+    <TASM_Defines>__CBUILDER__ __MONARCH__ _DEBUG __AML__;$(TASM_Defines)</TASM_Defines>
+    <BRCC_Defines>__CBUILDER__;__MONARCH__;_DEBUG;__AML__;$(BRCC_Defines)</BRCC_Defines>
+    <BCC_Defines>__CBUILDER__;$(BCC_Defines)</BCC_Defines>
+    <ILINK_LibraryPath>C:\Projekte\windekis\Genix\GXWARE32\LIB32\;..\..\..\genix\gxware32\lib32\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+    <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+    <VerInfo_Locale>1033</VerInfo_Locale>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Base_Win64)'!=''">
+    <TASM_Defines>__CBUILDER__ __MONARCH__ _DEBUG __AML__;$(TASM_Defines)</TASM_Defines>
+    <BRCC_Defines>__CBUILDER__;__MONARCH__;_DEBUG;__AML__;$(BRCC_Defines)</BRCC_Defines>
+    <BCC_Defines>__CBUILDER__;$(BCC_Defines)</BCC_Defines>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_1)'!=''">
+    <BCC_StringLiteralsNonConst>true</BCC_StringLiteralsNonConst>
+    <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+    <ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+    <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    <IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+    <BCC_wpar>false</BCC_wpar>
+    <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+    <Debugger_RunParams>USERID=weg/weg@LP077</Debugger_RunParams>
+    <BCC_MonitorGlobalAndStackData>true</BCC_MonitorGlobalAndStackData>
+    <Defines>__CODEGUARDEX__OFF__;$(Defines)</Defines>
+    <BCC_MonitorInlinePtrAccess>true</BCC_MonitorInlinePtrAccess>
+    <BCC_MonitorThis>true</BCC_MonitorThis>
+    <BCC_Defines>_DEBUG;$(BCC_Defines)</BCC_Defines>
+    <VerInfo_Locale>1033</VerInfo_Locale>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+    <BCC_Defines>_DEBUG;$(BCC_Defines)</BCC_Defines>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_2)'!=''">
+    <DCC_Optimize>true</DCC_Optimize>
+    <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+    <BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
+    <BCC_UseRegisterVariables>Always</BCC_UseRegisterVariables>
+    <DCC_DebugInformation>false</DCC_DebugInformation>
+    <IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+    <BCC_StackFrames>false</BCC_StackFrames>
+    <TASM_Debugging>None</TASM_Debugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+    <BCC_Defines>NDEBUG;$(BCC_Defines)</BCC_Defines>
+    <VerInfo_Locale>1033</VerInfo_Locale>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+    <BCC_Defines>NDEBUG;$(BCC_Defines)</BCC_Defines>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+    <Borland.ProjectType>CppGuiApplication</Borland.ProjectType>
+    <BorlandProject>
+      <CPlusPlusBuilder.Personality>
+        <VersionInfo>
+          <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+          <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+          <VersionInfo Name="MajorVer">1</VersionInfo>
+          <VersionInfo Name="MinorVer">0</VersionInfo>
+          <VersionInfo Name="Release">0</VersionInfo>
+          <VersionInfo Name="Build">0</VersionInfo>
+          <VersionInfo Name="Debug">False</VersionInfo>
+          <VersionInfo Name="PreRelease">False</VersionInfo>
+          <VersionInfo Name="Special">False</VersionInfo>
+          <VersionInfo Name="Private">False</VersionInfo>
+          <VersionInfo Name="DLL">False</VersionInfo>
+          <VersionInfo Name="Locale">2055</VersionInfo>
+          <VersionInfo Name="CodePage">1252</VersionInfo>
+        </VersionInfo>
+        <VersionInfoKeys>
+          <VersionInfoKeys Name="CompanyName"/>
+          <VersionInfoKeys Name="FileDescription"/>
+          <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+          <VersionInfoKeys Name="InternalName"/>
+          <VersionInfoKeys Name="LegalCopyright"/>
+          <VersionInfoKeys Name="LegalTrademarks"/>
+          <VersionInfoKeys Name="OriginalFilename"/>
+          <VersionInfoKeys Name="ProductName"/>
+          <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+          <VersionInfoKeys Name="Comments"/>
+        </VersionInfoKeys>
+        <Debugging>
+          <Debugging Name="DebugSourceDirs"/>
+        </Debugging>
+        <Parameters>
+          <Parameters Name="RunParams">USERID=Weg/Weg@sup20 TestValidate CheckDbDesc ViewGxDbDesc TestBarcode</Parameters>
+          <Parameters Name="Launcher"/>
+          <Parameters Name="UseLauncher">False</Parameters>
+          <Parameters Name="DebugCWD"/>
+          <Parameters Name="HostApplication"/>
+          <Parameters Name="RemoteHost"/>
+          <Parameters Name="RemotePath"/>
+          <Parameters Name="RemoteParams"/>
+          <Parameters Name="RemoteLauncher"/>
+          <Parameters Name="UseRemoteLauncher">False</Parameters>
+          <Parameters Name="RemoteCWD"/>
+          <Parameters Name="RemoteDebug">False</Parameters>
+          <Parameters Name="Debug Symbols Search Path"/>
+          <Parameters Name="LoadAllSymbols">True</Parameters>
+          <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+        </Parameters>
+        <Linker>
+          <Linker Name="LibPrefix"/>
+          <Linker Name="LibSuffix"/>
+          <Linker Name="LibVersion"/>
+        </Linker>
+        <ProjectProperties>
+          <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+          <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+          <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+          <ProjectProperties Name="IndexFiles">False</ProjectProperties>
+        </ProjectProperties>
+        <HistoryLists_hlIncludePath>
+          <HistoryLists_hlIncludePath Name="Count">1</HistoryLists_hlIncludePath>
+          <HistoryLists_hlIncludePath Name="Item0">Resource;..\..\..\Genix\ApWare32\WinDekis\Source;source;..\..\..\Genix\GXWARE32\SOURCE</HistoryLists_hlIncludePath>
+        </HistoryLists_hlIncludePath>
+        <HistoryLists_hlFinalOutputDir>
+          <HistoryLists_hlFinalOutputDir Name="Count">1</HistoryLists_hlFinalOutputDir>
+          <HistoryLists_hlFinalOutputDir Name="Item0">out32\</HistoryLists_hlFinalOutputDir>
+        </HistoryLists_hlFinalOutputDir>
+        <HistoryLists_hlILINK_LibraryPath>
+          <HistoryLists_hlILINK_LibraryPath Name="Count">1</HistoryLists_hlILINK_LibraryPath>
+          <HistoryLists_hlILINK_LibraryPath Name="Item0">$(BDS)\lib\debug;Resource\English;RESOURCE;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;..\..\..\Genix\GXWARE32\lib32;$(BDS)\lib\obj;$(BDS)\lib</HistoryLists_hlILINK_LibraryPath>
+        </HistoryLists_hlILINK_LibraryPath>
+        <HistoryLists_hlIntermediateOutputDir>
+          <HistoryLists_hlIntermediateOutputDir Name="Count">1</HistoryLists_hlIntermediateOutputDir>
+          <HistoryLists_hlIntermediateOutputDir Name="Item0">Debug_Build</HistoryLists_hlIntermediateOutputDir>
+        </HistoryLists_hlIntermediateOutputDir>
+        <Excluded_Packages>
+          <Excluded_Packages Name="C:\Program Files (x86)\Raize\CS5\Bin\CodeSiteExpressPkg_Design180.bpl">File C:\Program Files (x86)\Raize\CS5\Bin\CodeSiteExpressPkg_Design180.bpl not found</Excluded_Packages>
+        </Excluded_Packages>
+      </CPlusPlusBuilder.Personality>
+      <ModelSupport>False</ModelSupport>
+      <Platforms>
+        <Platform value="OSX32">False</Platform>
+        <Platform value="Win32">True</Platform>
+        <Platform value="Win64">False</Platform>
+      </Platforms>
+    </BorlandProject>
+    <ProjectFileVersion>12</ProjectFileVersion>
+  </ProjectExtensions>
+  <ItemGroup>
+    <CppCompile Include="..\..\..\Genix\ApWare32\common\source\*.cpp">
+      <BuildOrder>413</BuildOrder>
+    </CppCompile>
+    <CppCompile Include="..\..\..\Genix\ApWare32\Versandmgr\Source\TagesVersandPdfProcess.cpp">
+      <BuildOrder>411</BuildOrder>
+    </CppCompile>
+    <CppCompile Include="..\..\..\Genix\GXWARE32\common\source\*.cpp">
+      <BuildOrder>412</BuildOrder>
+    </CppCompile>
+    <BuildConfiguration Include="Release Build">
+      <Key>Cfg_2</Key>
+      <CfgParent>Base</CfgParent>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Base">
+      <Key>Base</Key>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Debug Build">
+      <Key>Cfg_1</Key>
+      <CfgParent>Base</CfgParent>
+    </BuildConfiguration>
+  </ItemGroup>
+  <Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+  <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+</Project>

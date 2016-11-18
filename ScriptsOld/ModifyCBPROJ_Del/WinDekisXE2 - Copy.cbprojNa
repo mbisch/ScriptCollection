@@ -1,0 +1,1748 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{026591D6-D2BB-4784-8270-027F8961ED08}</ProjectGuid>
+        <ProjectType>CppGuiApplication</ProjectType>
+        <Config Condition="'$(Config)'==''">Debug Build</Config>
+        <ProjectVersion>15.4</ProjectVersion>
+        <FrameworkType>None</FrameworkType>
+        <Base>True</Base>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug Build' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release Build' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
+        <Cfg_2_Win64>true</Cfg_2_Win64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>WinDekisXE2</SanitizedProjectName>
+        <UsingDelphiRTL>true</UsingDelphiRTL>
+        <IncludePath>..\..\..\Genix\GxWare32\;$(CG_BOOST_ROOT)\boost\tr1\tr1;$(CG_BOOST_ROOT);..\..\..\Genix\GxWare32\VCL\;..\..\..\Genix\GxWare32\VCL\Comp\Code\;Include\;Resource\;Source\;..\..\..\genix\apware32\WinDekis\include;..\..\..\genix\apware32\WinDekis\Source\;..\..\..\Genix\ApWare32\Versandmgr\Source\;..\..\..\genix\gxware32\include;..\..\..\genix\gxware32\source\;$(IncludePath)</IncludePath>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Locale>2055</VerInfo_Locale>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <LinkPackageStatics>rtl.lib</LinkPackageStatics>
+        <AllPackageLibs>rtl.lib</AllPackageLibs>
+        <OutputExt>exe</OutputExt>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+        <ILINK_IntermediateOutputPath>OUT32</ILINK_IntermediateOutputPath>
+        <DCC_ObjPath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;$(DCC_ObjPath)</DCC_ObjPath>
+        <BCC_OutputDir>OUT32\</BCC_OutputDir>
+        <ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+        <BRCC_OutputDir>OUT32\</BRCC_OutputDir>
+        <BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+        <ILINK_AppType>Windows</ILINK_AppType>
+        <BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+        <ILINK_ObjectSearchPath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;$(ILINK_ObjectSearchPath)</ILINK_ObjectSearchPath>
+        <BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+        <BCC_GenerateWindowsApp>true</BCC_GenerateWindowsApp>
+        <NoVCL>true</NoVCL>
+        <BCC_ZeroLengthEmptyMemberFuncs>true</BCC_ZeroLengthEmptyMemberFuncs>
+        <FinalOutputDir>out32\</FinalOutputDir>
+        <PackageImports>vcl.bpi;rtl.bpi;vclx.bpi;dbrtl.bpi;adortl.bpi;vcldb.bpi;dsnap.bpi;dsnap.bpi;dsnapcon.bpi;bdertl.bpi;vcldbx.bpi;bcboffice2k.bpi;bcbie.bpi;dbexpress.bpi;vclie.bpi;xmlrtl.bpi;inetdbbde.bpi;inet.bpi;inetdbxpress.bpi;dbxcds.bpi;bcbsmp.bpi;soaprtl.bpi;inetdb.bpi;ibxpress.bpi;indycore.bpi;indysystem.bpi;teeui.bpi;teedb.bpi;tee.bpi;$(PackageImports)</PackageImports>
+        <TASM_AdditionalSwitches> /w2 OUT32\</TASM_AdditionalSwitches>
+        <DCC_UnitSearchPath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <BCC_StackFrames>true</BCC_StackFrames>
+        <BCC_waus>false</BCC_waus>
+        <BCC_GenerateMultithreaded>true</BCC_GenerateMultithreaded>
+        <DCC_DcuOutput>OUT32\</DCC_DcuOutput>
+        <BCC_IntegerSizedEnums>false</BCC_IntegerSizedEnums>
+        <BRCC_IncludePath>include;Source;RESOURCE;Resource\English;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;$(BDS)\include;$(BDS)\include\windows\crtl;$(BDS)\include\windows\sdk;$(BRCC_IncludePath)</BRCC_IncludePath>
+        <TASM_IncludePath>RESOURCE\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;RESOURCE;..\..\..\Genix\GXWARE32\SOURCE;include;..\..\..\Genix\apware32\windekis\include;..\..\..\Genix\GXWARE32\include;$(BDS)\include;$(BDS)\include\vcl;$(TASM_IncludePath)</TASM_IncludePath>
+        <DCC_IncludePath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+        <BCC_IncludePath>include;$(BCC_IncludePath)</BCC_IncludePath>
+        <ILINK_LibraryPath>..\..\..\Genix\GxWare32\;..\..\..\Genix\GxWare32\VCL\Comp\Code\;..\..\..\Genix\GxWare32\VCL\;Include\;source\;Resource\;..\..\..\genix\apware32\WinDekis\Source\;..\..\..\Genix\ApWare32\Versandmgr\Source\;..\..\..\Genix\GXWARE32\SOURCE\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <BCC_ZeroLengthEmptyBaseClass>true</BCC_ZeroLengthEmptyBaseClass>
+        <BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+        <Multithreaded>true</Multithreaded>
+        <DCC_ObjOutput>OUT32\</DCC_ObjOutput>
+        <TASM_Debugging>Full</TASM_Debugging>
+        <BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+        <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+        <DCC_ResourcePath>Resource\English;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;RESOURCE;$(DCC_ResourcePath)</DCC_ResourcePath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <TASM_Defines>__CBUILDER__ __MONARCH__ _DEBUG __AML__;$(TASM_Defines)</TASM_Defines>
+        <BRCC_Defines>__CBUILDER__;__MONARCH__;_DEBUG;__AML__;$(BRCC_Defines)</BRCC_Defines>
+        <BCC_Defines>__CBUILDER__;$(BCC_Defines)</BCC_Defines>
+        <ILINK_LibraryPath>C:\Projekte\windekis\Genix\GXWARE32\LIB32\;..\..\..\genix\gxware32\lib32\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <TASM_Defines>__CBUILDER__ __MONARCH__ _DEBUG __AML__;$(TASM_Defines)</TASM_Defines>
+        <BRCC_Defines>__CBUILDER__;__MONARCH__;_DEBUG;__AML__;$(BRCC_Defines)</BRCC_Defines>
+        <BCC_Defines>__CBUILDER__;$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <BCC_StringLiteralsNonConst>true</BCC_StringLiteralsNonConst>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+        <BCC_wpar>false</BCC_wpar>
+        <TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <Debugger_RunParams>USERID=weg/weg@LP077</Debugger_RunParams>
+        <BCC_MonitorGlobalAndStackData>true</BCC_MonitorGlobalAndStackData>
+        <Defines>__CODEGUARDEX__OFF__;$(Defines)</Defines>
+        <BCC_MonitorInlinePtrAccess>true</BCC_MonitorInlinePtrAccess>
+        <BCC_MonitorThis>true</BCC_MonitorThis>
+        <BCC_Defines>_DEBUG;$(BCC_Defines)</BCC_Defines>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <BCC_Defines>_DEBUG;$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Optimize>true</DCC_Optimize>
+        <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+        <BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
+        <BCC_UseRegisterVariables>Always</BCC_UseRegisterVariables>
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+        <IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+        <BCC_StackFrames>false</BCC_StackFrames>
+        <TASM_Debugging>None</TASM_Debugging>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <BCC_Defines>NDEBUG;$(BCC_Defines)</BCC_Defines>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
+        <BCC_Defines>NDEBUG;$(BCC_Defines)</BCC_Defines>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+        <Borland.ProjectType>CppGuiApplication</Borland.ProjectType>
+        <BorlandProject>
+            <CPlusPlusBuilder.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">2055</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Debugging>
+                    <Debugging Name="DebugSourceDirs"/>
+                </Debugging>
+                <Parameters>
+                    <Parameters Name="RunParams">USERID=Weg/Weg@sup20 TestValidate CheckDbDesc ViewGxDbDesc TestBarcode</Parameters>
+                    <Parameters Name="Launcher"/>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="DebugCWD"/>
+                    <Parameters Name="HostApplication"/>
+                    <Parameters Name="RemoteHost"/>
+                    <Parameters Name="RemotePath"/>
+                    <Parameters Name="RemoteParams"/>
+                    <Parameters Name="RemoteLauncher"/>
+                    <Parameters Name="UseRemoteLauncher">False</Parameters>
+                    <Parameters Name="RemoteCWD"/>
+                    <Parameters Name="RemoteDebug">False</Parameters>
+                    <Parameters Name="Debug Symbols Search Path"/>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <Linker>
+                    <Linker Name="LibPrefix"/>
+                    <Linker Name="LibSuffix"/>
+                    <Linker Name="LibVersion"/>
+                </Linker>
+                <ProjectProperties>
+                    <ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+                    <ProjectProperties Name="ManagePaths">True</ProjectProperties>
+                    <ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+                    <ProjectProperties Name="IndexFiles">False</ProjectProperties>
+                </ProjectProperties>
+                <HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Count">1</HistoryLists_hlIncludePath>
+                    <HistoryLists_hlIncludePath Name="Item0">Resource;..\..\..\Genix\ApWare32\WinDekis\Source;source;..\..\..\Genix\GXWARE32\SOURCE</HistoryLists_hlIncludePath>
+                </HistoryLists_hlIncludePath>
+                <HistoryLists_hlFinalOutputDir>
+                    <HistoryLists_hlFinalOutputDir Name="Count">1</HistoryLists_hlFinalOutputDir>
+                    <HistoryLists_hlFinalOutputDir Name="Item0">out32\</HistoryLists_hlFinalOutputDir>
+                </HistoryLists_hlFinalOutputDir>
+                <HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Count">1</HistoryLists_hlILINK_LibraryPath>
+                    <HistoryLists_hlILINK_LibraryPath Name="Item0">$(BDS)\lib\debug;Resource\English;RESOURCE;Source;..\..\..\Genix\ApWare32\WinDekis\Source;..\..\..\Genix\GXWARE32\SOURCE;..\..\..\Genix\GXWARE32\lib32;$(BDS)\lib\obj;$(BDS)\lib</HistoryLists_hlILINK_LibraryPath>
+                </HistoryLists_hlILINK_LibraryPath>
+                <HistoryLists_hlIntermediateOutputDir>
+                    <HistoryLists_hlIntermediateOutputDir Name="Count">1</HistoryLists_hlIntermediateOutputDir>
+                    <HistoryLists_hlIntermediateOutputDir Name="Item0">Debug_Build</HistoryLists_hlIntermediateOutputDir>
+                </HistoryLists_hlIntermediateOutputDir>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Raize\CS5\Bin\CodeSiteExpressPkg_Design180.bpl">File C:\Program Files (x86)\Raize\CS5\Bin\CodeSiteExpressPkg_Design180.bpl not found</Excluded_Packages>
+                </Excluded_Packages>
+            </CPlusPlusBuilder.Personality>
+            <ModelSupport>False</ModelSupport>
+            <Platforms>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup>
+        <CppCompile Include="..\..\..\Genix\ApWare32\Versandmgr\Source\TagesVersandPdfProcess.cpp">
+            <BuildOrder>411</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\Versandmgr\Source\TagesVersandProcess.cpp">
+            <BuildOrder>412</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\Versandmgr\Source\VersandProcess.cpp">
+            <BuildOrder>412</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\Akte.cpp">
+            <BuildOrder>23</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AkteAuswahl.cpp">
+            <BuildOrder>24</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AkteListe.cpp">
+            <BuildOrder>25</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\aktennotizalarmpopup.cpp">
+            <BuildOrder>27</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\aktennotizansicht.cpp">
+            <BuildOrder>26</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\AktenNotizEditor.cpp">
+            <BuildOrder>28</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildAkteAnsicht.cpp">
+            <BuildOrder>29</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildAkteEditor.cpp">
+            <BuildOrder>30</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildAttachmentsAnsicht.cpp">
+            <BuildOrder>31</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildAttachmentsEditor.cpp">
+            <BuildOrder>32</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildAttachmentsEditorWrapper.cpp">
+            <BuildOrder>33</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildBeziehungenAkteAnsicht.cpp">
+            <BuildOrder>34</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildBeziehungenAkteEditor.cpp">
+            <BuildOrder>35</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildBeziehungenAnsicht.cpp">
+            <BuildOrder>36</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildBeziehungenEditor.cpp">
+            <BuildOrder>37</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildStichwortAkteAnsicht.cpp">
+            <BuildOrder>38</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildStichwortAkteEditor.cpp">
+            <BuildOrder>39</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildToDoAkteAnsicht.cpp">
+            <BuildOrder>40</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildToDoAkteEditor.cpp">
+            <BuildOrder>41</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildUserDefinedTabAnsicht.cpp">
+            <BuildOrder>42</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenNotizEditorChildUserDefinedTabEditor.cpp">
+            <BuildOrder>43</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktennotizenDrucken.cpp">
+            <BuildOrder>44</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AktenVersandDokumenteEinfuegen.cpp">
+            <BuildOrder>246</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\AlleAMLHits.cpp">
+            <BuildOrder>185</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\alleamlhitsauswahl.cpp">
+            <BuildOrder>184</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AlleBestellungenWebArchiv.cpp">
+            <BuildOrder>215</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AlleBestellungenWebArchivAuswahl.cpp">
+            <BuildOrder>214</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AlleFATCAHits.cpp">
+            <BuildOrder>469</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AlleFATCAHitsAuswahl.cpp">
+            <BuildOrder>489</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AllePortfolioFATCAHits.cpp">
+            <BuildOrder>478</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AllePortfolioFATCAHitsAuswahl.cpp">
+            <BuildOrder>479</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\AlleToDoListe.cpp">
+            <BuildOrder>183</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\alletodolisteauswahl.cpp">
+            <BuildOrder>182</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\alletodolistedrucken.cpp">
+            <BuildOrder>181</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AlleWorldCheckHits.cpp">
+            <BuildOrder>399</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AlleWorldCheckHitsAuswahl.cpp">
+            <BuildOrder>400</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AmlHitsUtils.cpp">
+            <BuildOrder>228</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\AmlUtils.cpp">
+            <BuildOrder>227</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ARCHIV.cpp">
+            <BuildOrder>180</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivAusgabe.cpp">
+            <BuildOrder>409</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivDokumentScanDokumentListAuswahl.cpp">
+            <BuildOrder>455</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivDokumentScanList.cpp">
+            <BuildOrder>456</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivDokumentScanListDataObject.cpp">
+            <BuildOrder>461</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivDokumentScanListDokumentListChild.cpp">
+            <BuildOrder>457</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivDokumentScanListStapelListChild.cpp">
+            <BuildOrder>458</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivDokumentScanStapelListAuswahl.cpp">
+            <BuildOrder>459</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivLaRocheDrucken.cpp">
+            <BuildOrder>492</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ArchivPaymentDrucken.cpp">
+            <BuildOrder>384</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\archivviewer.cpp">
+            <BuildOrder>179</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\a_auswah.cpp">
+            <BuildOrder>21</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\A_Berechtigung.cpp">
+            <BuildOrder>22</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\a_zuweis.cpp">
+            <BuildOrder>45</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\BarcodeDataObject.cpp">
+            <BuildOrder>474</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\BaseUtils.cpp">
+            <BuildOrder>1000</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\WinDekis\Source\BelegVersandEditor.cpp">
+            <BuildOrder>256</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\BestellenBelegeWebArchiv.cpp">
+            <BuildOrder>212</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\DATABASE.cpp">
+            <BuildOrder>176</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\DBDESC.cpp">
+            <BuildOrder>175</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\dbdescobjectutils.cpp">
+            <BuildOrder>174</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\dbdesczusatz.cpp">
+            <BuildOrder>173</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\DbUtils.cpp">
+            <BuildOrder>172</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\DialogDefinitionen.cpp">
+            <BuildOrder>461</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\DialogDefinitionenProject.cpp">
+            <BuildOrder>233</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\DialogDefinitionenUtils.cpp">
+            <BuildOrder>231</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\DidMitarbeiterBerechtigungObject.cpp">
+            <BuildOrder>462</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\documenteditor.cpp">
+            <BuildOrder>171</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\dokument.cpp">
+            <BuildOrder>170</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\dq_liste.cpp">
+            <BuildOrder>169</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\d_liste.cpp">
+            <BuildOrder>178</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\d_vorsch.cpp">
+            <BuildOrder>177</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\emaileditor.cpp">
+            <BuildOrder>166</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\e_auswah.cpp">
+            <BuildOrder>168</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\e_zuweis.cpp">
+            <BuildOrder>167</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\FatcaHitObject.cpp">
+            <BuildOrder>463</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\FatcaHitsAnsicht.cpp">
+            <BuildOrder>471</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\FatcaHitsEditor.cpp">
+            <BuildOrder>472</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\GenerateFatcaHits.cpp">
+            <BuildOrder>465</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\GenericToDoEditor.cpp">
+            <BuildOrder>480</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\history.cpp">
+            <BuildOrder>165</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\historyexplorer.cpp">
+            <BuildOrder>164</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\HitEskalationInfoEditor.cpp">
+            <BuildOrder>396</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\IEU_T004Import.cpp">
+            <BuildOrder>163</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ka_beleg.cpp">
+            <BuildOrder>133</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ka_dokuscan.cpp">
+            <BuildOrder>132</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\Ka_KorDokScan.cpp">
+            <BuildOrder>440</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ka_statu.cpp">
+            <BuildOrder>131</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kd_versa.cpp">
+            <BuildOrder>130</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ke_anlage.cpp">
+            <BuildOrder>129</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ke_daten.cpp">
+            <BuildOrder>191</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ke_dokuscan.cpp">
+            <BuildOrder>127</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ke_empfa.cpp">
+            <BuildOrder>128</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\Ke_KorDokScan.cpp">
+            <BuildOrder>441</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ke_kunde.cpp">
+            <BuildOrder>126</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ke_portf.cpp">
+            <BuildOrder>124</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ke_statu.cpp">
+            <BuildOrder>125</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KE_VERSANDFREQUENZEN.cpp">
+            <BuildOrder>122</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KE_VERSANDINSTRUKTIONEN.cpp">
+            <BuildOrder>121</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KorrespondenzDokumentList.cpp">
+            <BuildOrder>448</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KorrespondenzDokumentListAuswahl.cpp">
+            <BuildOrder>449</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kp_bankl.cpp">
+            <BuildOrder>120</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kp_dokuscan.cpp">
+            <BuildOrder>118</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kq_akte.cpp">
+            <BuildOrder>117</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KQ_BELEG.cpp">
+            <BuildOrder>431</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kq_doku.cpp">
+            <BuildOrder>115</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\kq_KorDok.cpp">
+            <BuildOrder>437</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kq_statu.cpp">
+            <BuildOrder>114</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\Kreditkarte.cpp">
+            <BuildOrder>425</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KreditkarteAuswahl.cpp">
+            <BuildOrder>427</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KreditkarteEditor.cpp">
+            <BuildOrder>426</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KreditkarteListe.cpp">
+            <BuildOrder>430</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KreditkarteZuweisung.cpp">
+            <BuildOrder>428</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ktoechild.cpp">
+            <BuildOrder>59</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ktoechildpseudo.cpp">
+            <BuildOrder>58</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ktoeleervertrag.cpp">
+            <BuildOrder>60</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KtoeList.cpp">
+            <BuildOrder>62</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KtoePortfolio.cpp">
+            <BuildOrder>61</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KtoeStatus.cpp">
+            <BuildOrder>66</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KtoeStatusChildEditor.cpp">
+            <BuildOrder>395</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ktoestatuseditorinfo.cpp">
+            <BuildOrder>65</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KtoeStatusPseudo.cpp">
+            <BuildOrder>64</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ktoeutils.cpp">
+            <BuildOrder>67</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KtoeVersand.cpp">
+            <BuildOrder>63</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KtoeVertragBasisEditor.cpp">
+            <BuildOrder>485</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KtoeVertragBasisSelection.cpp">
+            <BuildOrder>484</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\ktoevertragselection.cpp">
+            <BuildOrder>57</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KUNDE.cpp">
+            <BuildOrder>162</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeArchivContainer.cpp">
+            <BuildOrder>431</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeArchivLaRoche.cpp">
+            <BuildOrder>491</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeArchivPayment.cpp">
+            <BuildOrder>384</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeChildIEX.cpp">
+            <BuildOrder>435</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeChildMifid.cpp">
+            <BuildOrder>453</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeChildMifidEditor.cpp">
+            <BuildOrder>454</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeGwG.cpp">
+            <BuildOrder>421</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeGwGEditor.cpp">
+            <BuildOrder>423</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundeKreditkarte.cpp">
+            <BuildOrder>423</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KundeMovePortfolioEditor.cpp">
+            <BuildOrder>151</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KundenAktennotizen2004.cpp">
+            <BuildOrder>161</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kundenamlhits.cpp">
+            <BuildOrder>156</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KundenAMLHitsAnsicht.cpp">
+            <BuildOrder>155</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\KundenAMLHitsAuswahl.cpp">
+            <BuildOrder>154</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kundenamlhitsdrucken.cpp">
+            <BuildOrder>152</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kundenamlhitseditor.cpp">
+            <BuildOrder>153</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBeleg.cpp">
+            <BuildOrder>428</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBelegAuswahl.cpp">
+            <BuildOrder>429</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBelegChild.cpp">
+            <BuildOrder>430</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBelegDrucken.cpp">
+            <BuildOrder>414</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBelegDruckenLog.cpp">
+            <BuildOrder>375</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBelegScanEditor.cpp">
+            <BuildOrder>460</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBelegScanEditorDataObject.cpp">
+            <BuildOrder>476</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenBelegTransferOut.cpp">
+            <BuildOrder>213</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDeckblattDrucken.cpp">
+            <BuildOrder>247</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kundendokumentansicht.cpp">
+            <BuildOrder>160</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDokumentChildUserDefinedTabAnsicht.cpp">
+            <BuildOrder>235</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDokumentChildUserDefinedTabEditor.cpp">
+            <BuildOrder>234</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kundendokumenteditor.cpp">
+            <BuildOrder>159</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDokumentScanDokumentListAuswahl.cpp">
+            <BuildOrder>254</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDokumentScanList.cpp">
+            <BuildOrder>249</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDokumentScanListDokumentListChild.cpp">
+            <BuildOrder>252</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDokumentScanListStapelListChild.cpp">
+            <BuildOrder>253</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenDokumentScanStapelListAuswahl.cpp">
+            <BuildOrder>251</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenFatcaHits.cpp">
+            <BuildOrder>466</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenKorDokumentScanDokumentListAuswahl.cpp">
+            <BuildOrder>445</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenKorDokumentScanList.cpp">
+            <BuildOrder>248</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenKorDokumentScanListDokumentListChild.cpp">
+            <BuildOrder>446</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenKorDokumentScanListStapelListChild.cpp">
+            <BuildOrder>447</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenKorDokumentScanStapelListAuswahl.cpp">
+            <BuildOrder>447</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenPanoramaViewProfileDrucken.cpp">
+            <BuildOrder>368</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenPdfBelegDrucken.cpp">
+            <BuildOrder>188</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenPendenzDrucken.cpp">
+            <BuildOrder>186</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenProfileKundeGxDid.cpp">
+            <BuildOrder>237</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenProfileKundeGxDidChildEditor.cpp">
+            <BuildOrder>245</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenProfileKundeGxDidEditor.cpp">
+            <BuildOrder>238</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenProfilePortfolioGxDid.cpp">
+            <BuildOrder>239</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenProfilePortfolioGxDidChildEditor.cpp">
+            <BuildOrder>244</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenProfilePortfolioGxDidEditor.cpp">
+            <BuildOrder>236</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenSpezialReportFrequenzen.cpp">
+            <BuildOrder>375</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenSpezialReportFrequenzenEditor.cpp">
+            <BuildOrder>376</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kundentodoliste.cpp">
+            <BuildOrder>150</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kundentodolisteauswahl.cpp">
+            <BuildOrder>149</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenToDoListeEditor.cpp">
+            <BuildOrder>369</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenWorldCheckHits.cpp">
+            <BuildOrder>401</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenWorldCheckHitsChildTab.cpp">
+            <BuildOrder>483</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\KundenZuweisung.cpp">
+            <BuildOrder>223</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kunderisikoprofil.cpp">
+            <BuildOrder>158</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\kunderisikoprofileditor.cpp">
+            <BuildOrder>157</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\K_AUSWAH.cpp">
+            <BuildOrder>148</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\K_BANKLA.cpp">
+            <BuildOrder>147</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_berechtigung.cpp">
+            <BuildOrder>145</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\K_DATEN.cpp">
+            <BuildOrder>144</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_doku.cpp">
+            <BuildOrder>143</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_dokuscan.cpp">
+            <BuildOrder>142</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_insuff.cpp">
+            <BuildOrder>141</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\K_KorDok.cpp">
+            <BuildOrder>432</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_liste.cpp">
+            <BuildOrder>140</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_status.cpp">
+            <BuildOrder>139</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_utils.cpp">
+            <BuildOrder>138</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\K_VERSAN.cpp">
+            <BuildOrder>137</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\K_VERSANDFREQUENZEN.cpp">
+            <BuildOrder>136</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_versandinstruktionen.cpp">
+            <BuildOrder>135</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\k_zbefug.cpp">
+            <BuildOrder>134</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\logon.cpp">
+            <BuildOrder>113</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\main.cpp">
+            <BuildOrder>20</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\MigrateBenefialOwners.cpp">
+            <BuildOrder>395</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\migrator.cpp">
+            <BuildOrder>112</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\mislistlist.cpp">
+            <BuildOrder>111</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\mislistlistauswahl.cpp">
+            <BuildOrder>110</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\MisListListEditor.cpp">
+            <BuildOrder>109</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\mislistlistfieldeditor.cpp">
+            <BuildOrder>108</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\mislistviewerauswahlkunde.cpp">
+            <BuildOrder>107</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\mislistviewerauswahlpartner.cpp">
+            <BuildOrder>105</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\mislistviewerkunde.cpp">
+            <BuildOrder>106</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\mislistviewerpartner.cpp">
+            <BuildOrder>104</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PanoramaViewProfileEditor.cpp">
+            <BuildOrder>380</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\PARTNER.cpp">
+            <BuildOrder>103</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\partneraktennotizen2004.cpp">
+            <BuildOrder>102</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerBeleg.cpp">
+            <BuildOrder>418</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerBelegAuswahl.cpp">
+            <BuildOrder>420</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerBelegChild.cpp">
+            <BuildOrder>419</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerIEX.cpp">
+            <BuildOrder>438</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerIEXEditor.cpp">
+            <BuildOrder>439</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\PartnerInteressen.cpp">
+            <BuildOrder>79</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\PartnerInteressenEditor.cpp">
+            <BuildOrder>78</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerKreditkarte.cpp">
+            <BuildOrder>424</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerKreditkarteEditor.cpp">
+            <BuildOrder>429</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerListDialog.cpp">
+            <BuildOrder>226</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerPanoramaViewProfileDrucken.cpp">
+            <BuildOrder>375</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerProfileGxDid.cpp">
+            <BuildOrder>241</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerProfileGxDidChildEditor.cpp">
+            <BuildOrder>243</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerProfileGxDidEditor.cpp">
+            <BuildOrder>240</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerTelefonEditor.cpp">
+            <BuildOrder>190</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\partnertodoliste.cpp">
+            <BuildOrder>77</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\partnertodolisteauswahl.cpp">
+            <BuildOrder>76</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerWorldCheckHits.cpp">
+            <BuildOrder>405</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PartnerWorldCheckHitsChildTab.cpp">
+            <BuildOrder>481</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PdfContractTemplateProcessor.cpp">
+            <BuildOrder>483</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PdfUtils.cpp">
+            <BuildOrder>189</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PendenzList.cpp">
+            <BuildOrder>230</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PendenzListAuswahl.cpp">
+            <BuildOrder>229</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pe_adres.cpp">
+            <BuildOrder>88</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PE_BEZIE.cpp">
+            <BuildOrder>474</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pe_daten.cpp">
+            <BuildOrder>87</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pe_doku.cpp">
+            <BuildOrder>86</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pe_statu.cpp">
+            <BuildOrder>84</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PE_VERSANDINSTRUKTIONEN.cpp">
+            <BuildOrder>417</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PLAUSI.cpp">
+            <BuildOrder>392</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PortfolioChildREX.cpp">
+            <BuildOrder>436</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PortfolioKopierenEditor.cpp">
+            <BuildOrder>250</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pp_adres.cpp">
+            <BuildOrder>83</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pq_adres.cpp">
+            <BuildOrder>82</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pq_akte.cpp">
+            <BuildOrder>81</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\PQ_BEZIE.cpp">
+            <BuildOrder>468</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\pq_doku.cpp">
+            <BuildOrder>80</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\pq_KorDok.cpp">
+            <BuildOrder>451</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\print1.cpp">
+            <BuildOrder>75</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\psutils.cpp">
+            <BuildOrder>74</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\P_ADRESS.cpp">
+            <BuildOrder>101</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\P_AUSWAH.cpp">
+            <BuildOrder>100</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\p_berechtigung.cpp">
+            <BuildOrder>99</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\P_BEZIEH.cpp">
+            <BuildOrder>467</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\p_daten.cpp">
+            <BuildOrder>98</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\p_doku.cpp">
+            <BuildOrder>97</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\p_KorDok.cpp">
+            <BuildOrder>450</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\P_LISTE.cpp">
+            <BuildOrder>96</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\p_schnit.cpp">
+            <BuildOrder>94</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\p_status.cpp">
+            <BuildOrder>93</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\P_TELEFO.cpp">
+            <BuildOrder>92</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\P_UNTER.cpp">
+            <BuildOrder>91</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\p_unterscan.cpp">
+            <BuildOrder>90</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\P_VERSAN .cpp">
+            <BuildOrder>415</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\P_VERSANDINSTRUKTIONEN.cpp">
+            <BuildOrder>416</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\p_zuweis.cpp">
+            <BuildOrder>89</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\RecurrencyEditor.cpp">
+            <BuildOrder>477</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\rtfpreprozessor.cpp">
+            <BuildOrder>73</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\Scan2CRMListe.cpp">
+            <BuildOrder>431</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\Scan2CRMListeAuswahl.cpp">
+            <BuildOrder>432</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ScanDeckblattDrucken.cpp">
+            <BuildOrder>371</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\setup.cpp">
+            <BuildOrder>72</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\todolisteditor.cpp">
+            <BuildOrder>71</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\Utils.cpp">
+            <BuildOrder>70</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ValidationDef.cpp">
+            <BuildOrder>391</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ValidationList.cpp">
+            <BuildOrder>386</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ValidationListAuswahl.cpp">
+            <BuildOrder>387</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ValidationListChild.cpp">
+            <BuildOrder>388</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ValidationNavigation.cpp">
+            <BuildOrder>389</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\ValidationUtils.cpp">
+            <BuildOrder>390</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\versand.cpp">
+            <BuildOrder>68</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\VersandAusloesen.cpp">
+            <BuildOrder>408</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\v_auswah.cpp">
+            <BuildOrder>69</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildAntragEditor.cpp">
+            <BuildOrder>206</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysEditor.cpp">
+            <BuildOrder>198</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysPartnerIPXEditor.cpp">
+            <BuildOrder>442</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysPSOAdd1Editor.cpp">
+            <BuildOrder>203</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysPSOIEXEditor.cpp">
+            <BuildOrder>433</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysPSOMainEditor.cpp">
+            <BuildOrder>200</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysPSOTaxEditor.cpp">
+            <BuildOrder>397</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysRDLAdd1Editor.cpp">
+            <BuildOrder>205</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysRDLFatcaEditor.cpp">
+            <BuildOrder>443</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysRDLMainEditor.cpp">
+            <BuildOrder>204</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildApsysRDLREXEditor.cpp">
+            <BuildOrder>434</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildBeneficialOwnerMainEditor.cpp">
+            <BuildOrder>210</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildBeneficialOwnerMainPseudoEditor.cpp">
+            <BuildOrder>222</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildBesondereVereinbarungenEditor.cpp">
+            <BuildOrder>218</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildKlassifizierungEditor.cpp">
+            <BuildOrder>208</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildKlassifizierungMainEditor.cpp">
+            <BuildOrder>209</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildKontoInhaberMainEditor.cpp">
+            <BuildOrder>207</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildKontoInhaberMainPseudoEditor.cpp">
+            <BuildOrder>220</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildKorrespondenzMainEditor.cpp">
+            <BuildOrder>217</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildPartnerEditor.cpp">
+            <BuildOrder>211</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildPartnerPseudoEditor.cpp">
+            <BuildOrder>219</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildPortfolioAdd1Editor.cpp">
+            <BuildOrder>199</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildPortfolioEditor.cpp">
+            <BuildOrder>194</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildPortfolioMainEditor.cpp">
+            <BuildOrder>197</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildPPKommunikationEditor.cpp">
+            <BuildOrder>242</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildTransferEditor.cpp">
+            <BuildOrder>195</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildUebersichtEditor.cpp">
+            <BuildOrder>224</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildValidierungEditor.cpp">
+            <BuildOrder>393</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildVertragAuswahlEditor.cpp">
+            <BuildOrder>202</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildVertragDruckenEditor.cpp">
+            <BuildOrder>201</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildVollmachtenMainEditor.cpp">
+            <BuildOrder>216</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeChildVollmachtenMainPseudoEditor.cpp">
+            <BuildOrder>221</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeEditor.cpp">
+            <BuildOrder>193</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeKundenIdEditor.cpp">
+            <BuildOrder>225</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoePortfolioNrEditor.cpp">
+            <BuildOrder>196</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaKtoeStatusEditor.cpp">
+            <BuildOrder>394</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaPartnerZuweisung.cpp">
+            <BuildOrder>486</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaPortfolioApsysEditor.cpp">
+            <BuildOrder>473</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WmaUtils.cpp">
+            <BuildOrder>192</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckauswahl.cpp">
+            <BuildOrder>56</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckcheckpartner.cpp">
+            <BuildOrder>55</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckcheckpartnersequence.cpp">
+            <BuildOrder>53</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckcheckworldcheck.cpp">
+            <BuildOrder>54</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckcheckworldchecksequence.cpp">
+            <BuildOrder>52</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WorldCheckDatenAnsichtChild.cpp">
+            <BuildOrder>406</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckdateneditor.cpp">
+            <BuildOrder>51</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WorldCheckHitsAnsicht.cpp">
+            <BuildOrder>402</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WorldCheckHitsAnsichtChildHitsAnsicht.cpp">
+            <BuildOrder>407</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WorldCheckHitsChildTab.cpp">
+            <BuildOrder>482</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WorldCheckHitsEditor.cpp">
+            <BuildOrder>403</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckimport.cpp">
+            <BuildOrder>50</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckinfo.cpp">
+            <BuildOrder>49</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckliste.cpp">
+            <BuildOrder>47</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\ApWare32\WinDekis\Source\WorldCheckListeDrucken.cpp">
+            <BuildOrder>404</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\worldcheckutils.cpp">
+            <BuildOrder>48</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\apware32\windekis\source\xmlutils.cpp">
+            <BuildOrder>46</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GxWare32\GxCodeGuard.cpp">
+            <DependentOn>..\..\..\Genix\GxWare32\GxCodeGuard.h</DependentOn>
+            <BuildOrder>489</BuildOrder>
+        </CppCompile>
+        <LibFiles Include="..\..\..\Genix\GXWARE32\LIB32\DTKBarcode.lib">
+            <BuildOrder>362</BuildOrder>
+        </LibFiles>
+        <LibFiles Include="..\..\..\Genix\GXWARE32\LIB32\dynapdf30_040.lib" Condition="'$(Platform)'=='Win32'">
+            <BuildOrder>490</BuildOrder>
+        </LibFiles>
+        <LibFiles Include="..\..\..\Genix\GxWare32\LIB32\Eztwain3.lib" Condition="'$(Platform)'=='Win32'">
+            <BuildOrder>474</BuildOrder>
+        </LibFiles>
+        <LibFiles Include="..\..\..\genix\gxware32\lib32\gxctl132.lib">
+            <BuildOrder>356</BuildOrder>
+        </LibFiles>
+        <LibFiles Include="..\..\..\Genix\GXWARE32\LIB32\imgman32V81.lib">
+            <BuildOrder>359</BuildOrder>
+        </LibFiles>
+        <LibFiles Include="..\..\..\genix\gxware32\lib32\oci.lib">
+            <BuildOrder>357</BuildOrder>
+        </LibFiles>
+        <LibFiles Include="..\..\..\Genix\GXWARE32\LIB32\spr32d70.lib">
+            <BuildOrder>358</BuildOrder>
+        </LibFiles>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\AFORMAUTLib_TLB.cpp">
+            <BuildOrder>394</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxabout.cpp">
+            <BuildOrder>257</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxAipsysDataMatrix.cpp">
+            <BuildOrder>370</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxarchivviewer.cpp">
+            <BuildOrder>258</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxautochilddialog.cpp">
+            <BuildOrder>259</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\GxAutoDialog.cpp">
+            <BuildOrder>260</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxautoexpobj.cpp">
+            <BuildOrder>261</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxautomdidialog.cpp">
+            <BuildOrder>262</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxautosequence.cpp">
+            <BuildOrder>263</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxBarcodeDataObject.cpp">
+            <BuildOrder>474</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxblatemail.cpp">
+            <BuildOrder>264</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxchidlg.cpp">
+            <BuildOrder>265</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxchilddialogeditor.cpp">
+            <BuildOrder>266</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxcmc.cpp">
+            <BuildOrder>268</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxconf.cpp">
+            <BuildOrder>269</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxcvt.cpp">
+            <BuildOrder>270</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdataba.cpp">
+            <BuildOrder>271</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDataFlow.cpp">
+            <BuildOrder>413</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDataObject.cpp">
+            <BuildOrder>335</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdbdescobject.cpp">
+            <BuildOrder>272</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdbdescobjectfield.cpp">
+            <BuildOrder>274</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdbdescobjecttable.cpp">
+            <BuildOrder>275</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdbdescobjectutils.cpp">
+            <BuildOrder>273</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdblist.cpp">
+            <BuildOrder>276</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdbmem.cpp">
+            <BuildOrder>277</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\GXDBUTIL.cpp">
+            <BuildOrder>278</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDebugSettingsEditor.cpp">
+            <BuildOrder>334</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdefinewindows.cpp">
+            <BuildOrder>267</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdgitem.cpp">
+            <BuildOrder>279</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdgtmpl.cpp">
+            <BuildOrder>280</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDialogDefinitionen.cpp">
+            <BuildOrder>337</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDialogDefinitionenUtils.cpp">
+            <BuildOrder>336</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdialogeditor.cpp">
+            <BuildOrder>281</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDidMitarbeiterBerechtigungObject.cpp">
+            <BuildOrder>464</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdlg.cpp">
+            <BuildOrder>282</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdocumenteditor.cpp">
+            <BuildOrder>286</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDocumentObject.cpp">
+            <BuildOrder>369</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdocumentprint.cpp">
+            <BuildOrder>290</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdocumentviewer.cpp">
+            <BuildOrder>289</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdokumentfileinfo.cpp">
+            <BuildOrder>284</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdokumentscanansicht.cpp">
+            <BuildOrder>283</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdokumentscandialogansicht.cpp">
+            <BuildOrder>287</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanDokumentListAuswahl.cpp">
+            <BuildOrder>349</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxdokumentscandrucken.cpp">
+            <BuildOrder>285</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\GxDokumentScanEditor.cpp">
+            <BuildOrder>288</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanList.cpp">
+            <BuildOrder>344</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanListDataObject.cpp">
+            <BuildOrder>351</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanListDokumentListChild.cpp">
+            <BuildOrder>345</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanListStapelListChild.cpp">
+            <BuildOrder>346</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanStapelList.cpp">
+            <BuildOrder>347</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanStapelListAuswahl.cpp">
+            <BuildOrder>348</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxDokumentScanStapelListEditor.cpp">
+            <BuildOrder>350</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\Gxdrgdrp.cpp">
+            <BuildOrder>372</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxeditor.cpp">
+            <BuildOrder>291</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxexpobj.cpp">
+            <BuildOrder>292</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxEZTwain.cpp">
+            <BuildOrder>343</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxFieldmappingUtils.cpp">
+            <BuildOrder>339</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxhistory.cpp">
+            <BuildOrder>293</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxhistoryexplorer.cpp">
+            <BuildOrder>294</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxicobar.cpp">
+            <BuildOrder>295</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxLoggerModule.cpp">
+            <BuildOrder>452</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxlogon.cpp">
+            <BuildOrder>296</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmdi.cpp">
+            <BuildOrder>297</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmdidlg.cpp">
+            <BuildOrder>298</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmislistdataobject.cpp">
+            <BuildOrder>299</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmislistlist.cpp">
+            <BuildOrder>300</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmislistlistauswahl.cpp">
+            <BuildOrder>301</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmislistlisteditor.cpp">
+            <BuildOrder>302</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmislistlistfieldeditor.cpp">
+            <BuildOrder>303</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxMisListViewer.cpp">
+            <BuildOrder>354</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxMisListViewerAuswahl.cpp">
+            <BuildOrder>355</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxmmgr.cpp">
+            <BuildOrder>304</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxPdfContractTemplateProcessor.cpp">
+            <BuildOrder>381</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxPdfToolsXmlUtils.cpp">
+            <BuildOrder>352</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxPdfUtils.cpp">
+            <BuildOrder>341</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\GXPDFVIEWER.cpp">
+            <BuildOrder>305</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxprint.cpp">
+            <BuildOrder>306</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxprogramminfo.cpp">
+            <BuildOrder>307</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxPropertyObject.cpp">
+            <BuildOrder>342</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxpswd.cpp">
+            <BuildOrder>308</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxquery.cpp">
+            <BuildOrder>309</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxRtfPrintObject.cpp">
+            <BuildOrder>340</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxRtfTemplateProcessor.cpp">
+            <BuildOrder>338</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\GxScan.cpp">
+            <BuildOrder>310</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxsetup.cpp">
+            <BuildOrder>311</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxspread.cpp">
+            <BuildOrder>312</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxsqlfieldeditorobject.cpp">
+            <BuildOrder>314</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxsqlfieldobject.cpp">
+            <BuildOrder>313</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxsqlparsereditor.cpp">
+            <BuildOrder>315</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxsqlparserobject.cpp">
+            <BuildOrder>316</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxsqltableobject.cpp">
+            <BuildOrder>317</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxtreeviewnavigationnodeobject.cpp">
+            <BuildOrder>318</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxtreeviewnavigationobject.cpp">
+            <BuildOrder>319</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\GXUTILS.cpp">
+            <BuildOrder>320</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxValidationUtils.cpp">
+            <BuildOrder>385</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxwindow.cpp">
+            <BuildOrder>321</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckauswahl.cpp">
+            <BuildOrder>322</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckcheckpartner.cpp">
+            <BuildOrder>323</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckcheckpartnersequence.cpp">
+            <BuildOrder>324</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckcheckworldcheck.cpp">
+            <BuildOrder>326</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckcheckworldchecksequence.cpp">
+            <BuildOrder>325</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxWorldCheckDatenAnsichtChild.cpp">
+            <BuildOrder>408</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckdateneditor.cpp">
+            <BuildOrder>328</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckimport.cpp">
+            <BuildOrder>329</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckliste.cpp">
+            <BuildOrder>330</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\GxWorldCheckListeDrucken.cpp">
+            <BuildOrder>398</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckprintpartnersequence.cpp">
+            <BuildOrder>327</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\genix\gxware32\source\gxworldcheckutils.cpp">
+            <BuildOrder>331</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GXWARE32\SOURCE\trilean.cpp">
+            <BuildOrder>487</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GxWare32\VCL\Comp\Code\fwGxVclCompDef.cpp">
+            <BuildOrder>488</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="..\..\..\Genix\GxWare32\VCL\Comp\Code\fwGxVclString.cpp">
+            <BuildOrder>487</BuildOrder>
+        </CppCompile>
+        <None Include="Include\CODEFINE.h">
+            <BuildOrder>364</BuildOrder>
+        </None>
+        <None Include="Include\DEFINE.H">
+            <BuildOrder>363</BuildOrder>
+        </None>
+        <None Include="Include\Version.h">
+            <BuildOrder>365</BuildOrder>
+        </None>
+        <ResourceCompile Include="Resource\main.rc">
+            <Form>main.res</Form>
+            <BuildOrder>366</BuildOrder>
+        </ResourceCompile>
+        <CppCompile Include="Source\ChildKPClientMainDataEditor.cpp">
+            <BuildOrder>16</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildKPKontoInhaber.cpp">
+            <BuildOrder>18</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildKPPortfolioKontakt.cpp">
+            <BuildOrder>19</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPartnerProfilEditor.cpp">
+            <BuildOrder>17</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPPPartnerBerufEditor.cpp">
+            <BuildOrder>11</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPPPartnerContactEditor.cpp">
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPPPartnerHobbysEditor.cpp">
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPPPartnerInteressenEditor.cpp">
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPPPartnerPersoenlicheVerhaeltnisseEditor.cpp">
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPPPartnerVermoegensverhaeltnisseEditor.cpp">
+            <BuildOrder>12</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ChildPPPartnerVorsorgeEditor.cpp">
+            <BuildOrder>13</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="source\ke_profile.cpp">
+            <BuildOrder>2</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="source\kp_profile.cpp">
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="source\ktoevertrag.cpp">
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\KundenPanoramaViewProfileChild.cpp">
+            <BuildOrder>378</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\KundenPanoramaViewProfileEditor.cpp">
+            <BuildOrder>379</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="source\k_profile.cpp">
+            <BuildOrder>1</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\PartnerPanoramaViewProfileChild.cpp">
+            <BuildOrder>380</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\PartnerPanoramaViewProfileEditor.cpp">
+            <BuildOrder>381</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="source\pe_profile.cpp">
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\PortfolioKontakt.cpp">
+            <BuildOrder>14</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Source\ProfilEditor.cpp">
+            <BuildOrder>15</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="source\p_profile.cpp">
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <BuildConfiguration Include="Release Build">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug Build">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+</Project>

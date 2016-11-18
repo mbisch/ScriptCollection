@@ -1,0 +1,2 @@
+AModify CBPROJ files (2016-11-02 11:56:26)
+Start Directory: ..\..\..\genix\apware32\windekis\source\dbdesczusatz.cpp

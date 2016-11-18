@@ -1,0 +1,1074 @@
+/**************************************************************************
+ DbDescMitarbeiterZusatzHistory.cpp
+ **************************************************************************
+ Projekt      : ApWare32 - WinDekis
+ Copyright    : SunGard Ambit CRM
+ Compiler     : Borland C++
+ Beschreibung : Enthält Datenbankbeschreibungslinien des Projekts
+                Von ApWare in den Project Ordner kopieren und
+                projektspezifisch erweitern
+ **************************************************************************
+
+  Author origin: Ae
+  Last update:   $Author: SPI $
+                 $Revision: 1.140 $
+                 $Date: 2014/09/22 14:54:52 $
+
+ **************************************************************************
+
+ Datum        Vers   Vis   Beschreibung
+ -----        ----   ---   ------------
+
+ 24.01.2005   1.00   Ae    1. Ausgabe
+ 18.02.2005   1.01   Ae    Erweiterungen DBL
+ 06.06.2005   1.02   AH    MGRUPPE_BRTG_EUZST_MANUELL_CD hinzugefügt für __DBL__
+ 19.08.2005   1.03   Ae    MGRUPPE_HIST_BRTG_PARTNERKOPIEREN_CD
+ 26.09.2005   1.04   Ae    MGRUPPE_HIST_BRTG_SCHLIESSFACH_CD
+ 29.01.2007   1.05   NN    English translation _T("Historicized")
+
+ **************************************************************************/
+
+
+/**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+ {    Tabelle:Nr,                    TabNr,         szDBName,         OrderBy,         DefaultDesc,    nFields,  szName,                        PrimaryKey,      Flags,        QueryFlags   },
+ {    Feld:Nr,                       TabNr,         szDBName,         DBType,          CType,          Len,      szName,                        ForeignKey,      Flags,        QueryFlags   },
+ **********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+
+
+ // Applikationen
+ // *************
+
+   #ifdef __ADMINHISTORY__
+   #ifdef __MITARBEITER_GRUPPE__
+   {    GRUPPENAPPLIKATIONEN_HIST,                        _T("Applikationzuweisung History"),                               _T("Granted Applications History"),                               },
+   {    GRUPPENAPPLIKATIONEN_HIST_GRUPPEID,               _T("Mitarbeitergruppe"),                                          _T("Group"),                                                      },
+   {    GRUPPENAPPLIKATIONEN_HIST_APPL_NAME_CD,           _T("Applikation"),                                                _T("Application"),                                                },
+   {    GRUPPENAPPLIKATIONEN_HIST_APPL_ROLLE_CD,          _T("Rolle"),                                                      _T("Role"),                                                       },
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    GRUPPENAPPLIKATIONEN_HIST_LOESCH_CD,              _T("Gelöscht"),                                                   _T("Deleted"),                                                    },
+   {    GRUPPENAPPLIKATIONEN_HIST_LOESCHDATUM,            _T("Gelöscht am"),                                                _T("Deleted on"),                                                 },
+   {    GRUPPENAPPLIKATIONEN_HIST_LOESCHUSER,             _T("Gelöscht durch"),                                             _T("Deleted by"),                                                 },
+   {    GRUPPENAPPLIKATIONEN_HIST_CRTDATUM,               _T("Erstellt am"),                                                _T("Created on"),                                                 },
+   {    GRUPPENAPPLIKATIONEN_HIST_CRTUSER,                _T("Erstellt durch"),                                             _T("Created by"),                                                 },
+   {    GRUPPENAPPLIKATIONEN_HIST_MUTDATUM,               _T("Geändert am"),                                                _T("Modified on"),                                                },
+   {    GRUPPENAPPLIKATIONEN_HIST_MUTUSER,                _T("Geändert durch"),                                             _T("Modified by"),                                                },
+   {    GRUPPENAPPLIKATIONEN_HIST_GRUPPENAPPLIKATIONID,   _T("Applikationzuweisung ID"),                                    _T("Permitted on Unit-ID"),                                       },
+   {    GRUPPENAPPLIKATIONEN_HIST_AKTID,                  _T("AktID"),                                                      _T("AktID"),                                                      },
+   {    GRUPPENAPPLIKATIONEN_HIST_VALIDID,                _T("ValidID"),                                                    _T("ValidID"),                                                    },
+   {    GRUPPENAPPLIKATIONEN_HIST_VALID_CD,               _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    GRUPPENAPPLIKATIONEN_HIST_VALIDUSER,              _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   {    GRUPPENAPPLIKATIONEN_HIST_FUNKTION,               _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    GRUPPENAPPLIKATIONEN_HIST_HIST_DATUM,             _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    GRUPPENAPPLIKATIONEN_HIST_HIST_USER,              _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+
+   #else
+   {    APPLIKATIONEN_HIST,                               _T("Applikationzuweisung History"),                               _T("Granted Applications History"),                               },
+   {    APPLIKATIONEN_HIST_USERID,                        _T("Mitarbeiter"),                                                _T("User"),                                                       },
+   {    APPLIKATIONEN_HIST_APPL_NAME_CD,                  _T("Applikation"),                                                _T("Application"),                                                },
+   {    APPLIKATIONEN_HIST_APPL_ROLLE_CD,                 _T("Rolle"),                                                      _T("Role"),                                                       },
+   {    APPLIKATIONEN_HIST_FUNKTION,                      _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    APPLIKATIONEN_HIST_HIST_DATUM,                    _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    APPLIKATIONEN_HIST_HIST_USER,                     _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    APPLIKATIONEN_HIST_LOESCH_CD,                     _T("Gelöscht"),                                                   _T("Deleted"),                                                    },
+   {    APPLIKATIONEN_HIST_LOESCHDATUM,                   _T("Gelöscht am"),                                                _T("Deleted on"),                                                 },
+   {    APPLIKATIONEN_HIST_LOESCHUSER,                    _T("Gelöscht durch"),                                             _T("Deleted by"),                                                 },
+   {    APPLIKATIONEN_HIST_CRTDATUM,                      _T("Erstellt am"),                                                _T("Created on"),                                                 },
+   {    APPLIKATIONEN_HIST_CRTUSER,                       _T("Erstellt durch"),                                             _T("Created by"),                                                 },
+   {    APPLIKATIONEN_HIST_MUTDATUM,                      _T("Geändert am"),                                                _T("Modified on"),                                                },
+   {    APPLIKATIONEN_HIST_MUTUSER,                       _T("Geändert durch"),                                             _T("Modified by"),                                                },
+   {    APPLIKATIONEN_HIST_APPLIKATIONID,                 _T("Applikationzuweisung ID"),                                    _T("Permitted on Unit-ID"),                                       },
+   {    APPLIKATIONEN_HIST_AKTID,                         _T("AktID"),                                                      _T("AktID"),                                                      },
+   {    APPLIKATIONEN_HIST_VALIDID,                       _T("ValidID"),                                                    _T("ValidID"),                                                    },
+   {    APPLIKATIONEN_HIST_VALID_CD,                      _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    APPLIKATIONEN_HIST_VALIDUSER,                     _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   #endif // __MITARBEITER_GRUPPE__
+   #endif // __ADMINHISTORY__
+
+ // Mitarbeiter
+ // ***********
+
+#ifdef __ADMINHISTORY__
+   {    MITARBEITER_HIST,                                 _T("Mitarbeiter History"),                                        _T("User History")                                            },
+   {    MITARBEITER_HIST_USERID,                          _T("UserId"),                                                     _T("UserId")                                                  },
+   {    MITARBEITER_HIST_NAME,                            _T("Name"),                                                       _T("Name")                                                    },
+   #ifdef __ZUGRIFFSBERECHTIGUNG__
+      #ifndef __MITARBEITER_GRUPPE__
+   {    MITARBEITER_HIST_SUPERUSER_CD,                    _T("Superuser"),                                                  _T("Superuser")                                               },
+         #ifdef __BACKOFFICEUSER__
+   {    MITARBEITER_HIST_BACKOFFICEUSER_CD,               _T("Back-Office User"),                                           _T("Back-Office User")                                        },
+         #endif // __BACKOFFICEUSER__
+      #endif // __MITARBEITER_GRUPPE__
+      #if MITARBEITER_HIST_APSYSUSERID > 0
+   {    MITARBEITER_HIST_APSYSUSERID,                     _T("Apsys User"),                                                 _T("Apsys User")                                              },
+      #endif  // MITARBEITER_HIST_APSYSUSERID
+   #endif // __ZUGRIFFSBERECHTIGUNG__
+   {    MITARBEITER_HIST_BRTG_ROLLE,                      _T("Permanente Rolle"),                                           _T("Permanent Role")                                          },
+   #ifdef __GXMULTILANGUAGE__
+   {    MITARBEITER_HIST_ADMINTAB_SPRACHE_CD,             _T("Sprache"),                                                    _T("Language")                                                },
+   #endif  // __GXMULTILANGUAGE__
+   #ifndef __MITARBEITER_GRUPPE__
+   {    MITARBEITER_HIST_VERTRAULICHKEITID,               _T("Vertraulichkeit"),                                            _T("Security Level")                                          },
+   {    MITARBEITER_HIST_DOWNLOAD_VERZ,                   _T("Download-Verzeichnis"),                                       _T("Download Directory")                                      },
+   {    MITARBEITER_HIST_BRTG_MUTATION,                   _T("Berechtigung Daten bearbeiten"),                              _T("Privilege to Edit Data")                                  },
+   #ifdef __BERATER__
+   {    MITARBEITER_HIST_BRTG_EDIT_KUNDENPROFIL_CD,       _T("Berechtigung Kundenprofil erfassen"),                         _T("Privilege to Edit Client Profile")                        },
+   #endif
+   {    MITARBEITER_HIST_BRTG_ADRESSE,                    _T("Berechtigung Adressen erfassen"),                             _T("Privilege to Edit Addresses")                             },
+   {    MITARBEITER_HIST_BRTG_KOMMUNIKATION,              _T("Berechtigung Kommunikationsnummern erfassen"),                _T("Privilege to Edit Communication No.")                     },
+   {    MITARBEITER_HIST_BRTG_DOKU,                       _T("Berechtigung Kundendokumente erfassen"),                      _T("Privilege to Edit Documents/Pending Item")                },
+   #if MITARBEITER_BRTG_SCANNING_CD > 0
+   {    MITARBEITER_HIST_BRTG_SCANNING_CD,                _T("Berechtigung Scannen"),                                       _T("Privilege to Scan")                                       },
+   #endif
+   #if MITARBEITER_HIST_BRTG_HOLD_MAIL_ADRESSE_CD > 0
+   {    MITARBEITER_HIST_BRTG_HOLD_MAIL_ADRESSE_CD,       _T("Domiziladresse von Banklagernd-Kunden einsehen"),             _T("Privilege Access Adress of Hold Mail clients")            },
+   #endif
+   #if MITARBEITER_BRTG_CONFIDENTIAL_CD > 0
+   {    MITARBEITER_HIST_BRTG_CONFIDENTIAL_CD,            _T("Berechtigung 'Vertraulich' setzen"),                          _T("Privilege set 'Confidential'")                            },
+   #endif
+   {    MITARBEITER_HIST_BRTG_UNTERSCHRIFT,               _T("Berechtigung Unterschriften erfassen"),                       _T("Privilege to Scan Signatures")                            },
+   {    MITARBEITER_HIST_BRTG_BANKPOST,                   _T("Berechtigung Banklagernde Post bestellen/bearbeiten"),        _T("Privilege to Order Hold-Mail")                            },
+   #ifdef __MAILING_CONFIGURATION__
+   {    MITARBEITER_HIST_BRTG_MODIFYSPECIALINST_CD,       _T("Berechtigung Sonderinstruktionen zu ändern"),                 _T("Privilege to modify special instructions")                },
+   #endif
+   #if MITARBEITER_BRTG_CONFIRM_HOLDMAIL_CD > 0
+   {    MITARBEITER_HIST_BRTG_CONFIRM_HOLDMAIL_CD,        _T("Berechtigung Banklagernde Post quittieren"),                  _T("Privilege to Confirm Hold-Mail period")                   },
+   #endif
+   #if MITARBEITER_BRTG_SEND_HOLDMAIL_CD > 0
+   {    MITARBEITER_HIST_BRTG_SEND_HOLDMAIL_CD,           _T("Berechtigung Banklagernde Post versenden"),                   _T("Privilege to Send Hold-Mail")                             },
+   #endif
+   {    MITARBEITER_HIST_BRTG_SALDIEREN,                  _T("Berechtigung Kunde/Portfolio saldieren"),                     _T("Privilege to Close Clients/Portfolios")                   },
+   {    MITARBEITER_HIST_BRTG_DRUCKEN,                    _T("Berechtigung Drucken Adressen/Listen"),                       _T("Privilege to Print Addresses/Lists")                      },
+   #ifdef __KUNDENDECKBLATTDRUCKEN__
+   {    MITARBEITER_HIST_BRTG_DKSCANNINGDECKBLATT_CD,     _T("Berechtigung Scanning Deckblatt drucken"),                    _T("Privilege Print Scanning Cover Sheet")                    },
+   #endif
+   {    MITARBEITER_HIST_BRTG_DRUCKENBELEG,               _T("Berechtigung Drucken Belege"),                                _T("Privilege to Print Advices")                              },
+      #ifdef __PRINT_PDF_DOKUMENTE__
+   {    MITARBEITER_HIST_BRTG_DRUCKENPDFBELEG,            _T("Berechtigung Drucken Belege aus Acrobat"),                    _T("Privilege to Print Advices from Acrobat")                 },
+      #endif   // __PRINT_PDF_DOKUMENTE__
+   {    MITARBEITER_HIST_BRTG_CONFIGACCLISTE,             _T("Berechtigung Konfiguration Kundenliste"),                     _T("Privilege to Edit Client List")                           },
+   {    MITARBEITER_HIST_BRTG_CONFIGPARLISTE,             _T("Berechtigung Konfiguration Partnerliste"),                    _T("Privilege to Edit Individual List")                       },
+   #if defined (__WEBARCHIV__) || defined (__SPEZIALVERSANDART__)
+   {    MITARBEITER_HIST_BRTG_BESTELLEN_WEB_CD,           _T("Berechtigung Belege für Online Monitor bestellen"),           _T("Privilege to Order Advices for Online Monitor")           },
+   #endif  // __WEBARCHIV__
+   #if defined (__WEBARCHIV__) || defined (__EMAILVERSAND__) || defined (__BAB__) || defined (__BHF_STYLE__)
+   {    MITARBEITER_HIST_BRTG_TRANSFEROUT_CD,             _T("Berechtigung Online Monitor"),                                _T("Privilege for Online Monitor")                            },
+   #endif  // (__BAB__) || defined (__BHF_STYLE__)
+   #ifdef __GXMISLIST_DB__
+   {    MITARBEITER_HIST_BRTG_EDIT_MISLISTE_CD,           _T("Berechtigung MIS Listen bearbeiten"),                         _T("Privilege to Edit MIS Lists")                             },
+   #if defined (__BRTG_DRUCKEN_MISLISTE__)
+   {    MITARBEITER_HIST_BRTG_DRUCKEN_MISLISTE_CD,        _T("Berechtigung MIS Listen drucken"),                            _T("Privilege to Print MIS Lists")                            },
+   #endif
+      #endif  // __GXMISLIST_DB__
+      #ifdef __GXMISLIST_DB_02__
+   {    MITARBEITER_HIST_BRTG_EDIT_SUPERSQL_MISLISTE_CD,  _T("Berechtigung MIS SuperSQL Listen bearbeiten"),                _T("Privilege to Edit MIS SuperSQL Lists")                    },
+      #endif  // __GXMISLIST_DB__
+      #ifdef __GXQUERY_SQLSTATEMENT__
+   {    MITARBEITER_HIST_BRTG_ADD_SQL_CD,                 _T("Berechtigung SQL Anweisungen hinzufügen"),                    _T("Privilege to Add SQL Statements")                         },
+      #endif  // MITARBEITER_HIST_BRTG_ADD_SQL_CD
+   {    MITARBEITER_HIST_BRTG_ALLTABLES,                  _T("Berechtigung alle Tabellen sichtbar"),                        _T("Privilege to All Tables")                                 },
+   #ifdef __TELEFONIE__
+   {    MITARBEITER_HIST_BRTG_TELEFON,                    _T("Berechtigung Telefonapplikation"),                            _T("Privilege to Phone Application")                          },
+   {    MITARBEITER_HIST_BRTG_TELDEKIS,                   _T("Berechtigung Zugriff auf Dekis Telefon-Nr."),                 _T("Privilege to Access Dekis Phone No.")                     },
+   #ifndef __BHF_STYLE__
+   {    MITARBEITER_BRTG_TELMITARBEITER,                  _T("Berechtigung Aendern von Mitarbeiter Telefon-Nr."),           _T("Privilege to Edit User Phone No.")                        },
+   #endif
+   {    MITARBEITER_HIST_BRTG_TELFIRMA,                   _T("Berechtigung Zugriff auf Firmen Telefon-Nr."),                _T("Privilege to Access Company Phone No.")                   },
+   {    MITARBEITER_HIST_BRTG_TELTRADER,                  _T("Berechtigung Zugriff auf Trader Telefon-Nr."),                _T("Privilege to Access Trader Phone No.")                    },
+   #endif
+      #ifdef __MANUELLEKTOE__
+   {    MITARBEITER_HIST_BRTG_MANUELLEKTOE_CD,            _T("Berechtigung Kunde/Portfolio eröffnen"),                      _T("Privilege to Edit Client/Portfolio")                      },
+      #endif  // __MANUELLEKTOE__
+      #ifdef __VERSANDAUSARCHIV__
+   {    MITARBEITER_HIST_BRTG_VERSANDAUSARCHIV_CD,        _T("Berechtigung Versand aus Archiv auszulösen"),                 _T("Privilege to Mail out of Archive")                        },
+   {    MITARBEITER_HIST_BRTG_SERIENBRIEF_CD,             _T("Berechtigung Serienbrief erstellen"),                         _T("Privilege to Create Mail Merge")                          },
+      #endif  // __VERSANDAUSARCHIV__
+      #ifdef __BJB__
+   {    MITARBEITER_HIST_BRTG_SERIENBRIEF_CD,             _T("Berechtigung Serienbrief erstellen"),                         _T("Privilege to Create Mail Merge")                          },
+      #endif  // __BJB__
+      #ifdef __TAXRECLAIM__
+   {    MITARBEITER_HIST_BRTG_EXPORT_TAX_RECLAIM_CD,      _T("Berechtigung Tax Reclaim exportieren"),                       _T("Privilege to export Tax Reclaim Data")                    },
+      #endif  // __TAXRECLAIM__
+      #ifdef __KONTOEROEFFNUNG__
+   {    MITARBEITER_HIST_BRTG_ERFASSEN_KTOE_CD,           _T("Berechtigung Kontoeröffnung erfassen"),                       _T("Privilege to Edit Account Opening")                       },
+   {    MITARBEITER_HIST_BRTG_DRUCKEN_KTOE_CD,            _T("Berechtigung Kontoeröffnung drucken"),                        _T("Privilege to Print Account Opening")                      },
+       #ifdef __WMA_PROSPECTS__
+   {    MITARBEITER_HIST_BRTG_ERFASSEN_PROSPECT_CD,       _T("Berechtigung Prospect erfassen"),                             _T("Privilege to Open Prospects")                             },
+       #endif
+      #endif  // __KONTOEROEFFNUNG__
+      #ifdef __WINDEKIS_MASTER__
+   {    MITARBEITER_HIST_BRTG_EDIT_PORTFOLIONO_CD,        _T("Berechtigung manuelle Portfolio-Nr./ Kunden-Nr. erfassen"),   _T("Privilege to open manually Portfolio No. / Client No.")   },
+      #endif
+      #ifdef __WEG__
+   {    MITARBEITER_HIST_BRTG_MONATSVERSAND_CD,           _T("Berechtigung Periodischer Versand drucken"),                  _T("Privilege to Print Periodical Mailing")                   },
+   {    MITARBEITER_HIST_BRTG_KREDITKARTEN_CD,            _T("Berechtigung Kreditkartendaten bearbeiten"),                  _T("Privilege to Edit Credit Cards Data")                     },
+      #endif  // __WEG__
+      #ifdef __ERTRAEGNISAUFSTELLUNG__
+   {    MITARBEITER_HIST_BRTG_ERTRAG,                     _T("Berechtigung Ertragsaufstellung bearbeiten"),                 _T("Berechtigung Ertragsaufstellung bearbeiten")              },
+      #endif  // __ERTRAEGNISAUFSTELLUNG__
+
+      #if defined (__WORLDCHECK__)
+         #ifdef __WEG__
+      {    MITARBEITER_HIST_BRTG_WORLDCHECK_CD,                    _T("Berechtigung Black-Liste abfragen"),            _T("Privilege World-Check")                               },
+      {    MITARBEITER_HIST_BRTG_IMPORT_WORLDCHECK_CD,             _T("Berechtigung Black-Liste ändern/importieren"),  _T("Privilege to Edit/Import World-Check Data")           },
+         #else
+      {    MITARBEITER_HIST_BRTG_WORLDCHECK_CD,                    _T("Berechtigung World-Check"),                     _T("Privilege World-Check")                               },
+         #endif   // __WEG__
+         #ifdef __WORLDCHECK_HITS_EXT_WORKFLOW__
+      {    MITARBEITER_HIST_BRTG_IMPORT_WORLDCHECK_CD,             _T("Berechtigung World-Check importieren"),               _T("Privilege to import World-Check data")                           },
+      {    MITARBEITER_HIST_BRTG_EDIT_WORLDCHECK_CD,               _T("Berechtigung World-Check ändern/importieren"),        _T("Privilege to edit/import World-Check data")                      },
+         #endif   // __WORLDCHECK_HITS_EXT_WORKFLOW__
+      #endif  // __WORLDCHECK__
+      #ifdef __PARTNER_DUBLETTEN__
+      {    MITARBEITER_HIST_BRTG_PARTNERDUBLETTEN_CD,              _T("Berechtigung Partner Dubletten bearbeiten"),                  _T("Privilige for partner double finder")                         },
+      #endif
+      #ifdef __EXTERNE_QUELLEN__
+      {    MITARBEITER_HIST_BRTG_EXTERNEQUELLEN_CD,                _T("Berechtigung Externe Quellen abfragen") ,             _T("Privilege External Sources")                                     },
+      {    MITARBEITER_HIST_BRTG_IMPORT_EXTERNEQUELLEN_CD,         _T("Berechtigung Externe Quellen importieren"),           _T("Privilege to import External Sources data")                      },
+      #endif   // __EXTERNE_QUELLEN__
+      #if defined (__EUTAXREPORTING__)
+   {    MITARBEITER_HIST_BRTG_EUTAXREPORTING_CD,          _T("Berechtigung EU Tax Reporting"),                              _T("Privilege for EU Tax Reporting")                          },
+      #endif  // __EUTAXREPORTING__
+
+      #if defined (__PARTNERSTWORT__)
+   {    MITARBEITER_HIST_BRTG_PARTNERSTICHWORT_CD,        _T("Berechtigung Stichworte bearbeiten"),                         _T("Privilege to Edit Individual Keywords")                   },
+      #endif  // __PARTNERSTWORT__
+      #if defined (__VALIDIERUNG__)
+   {    MITARBEITER_HIST_BRTG_VALIDIEREN_CD,              _T("Berechtigung zur Validierung"),                               _T("Privilege to Validate Data")                              },
+      #endif  // __VALIDIERUNG__
+      #if defined (__ADMIN_EDIT_BRTG__)
+   {    MITARBEITER_HIST_BRTG_EDTADMIN_CD,                _T("Berechtigung Tabellendaten bearbeiten"),                      _T("Privilege to Edit Table Data")                            },
+   {    MITARBEITER_HIST_BRTG_EDTMITARBEITER_CD,          _T("Berechtigung Mitarbeiterdaten bearbeiten"),                   _T("Privilege to Edit User Data")                             },
+      #endif  // __ADMIN_EDIT_BRTG__
+      #if defined (__BRTG_KORRESPONDENZ__)
+   {    MITARBEITER_HIST_BRTG_KORRESPONDENZ_CD,           _T("Berechtigung Korrespondenz erfassen"),                        _T("Privilege to edit Correspondence")                        },
+      #endif
+      #if defined (__PBIHAG_WDK__)
+   {    MITARBEITER_HIST_BRTG_CONTRACTS_FROM_DOCS_CD,     _T("Berechtigung Verträge aus Dokumenten"),                       _T("Privilege create/edit/print Contracts from Documents")    },
+      #endif  // __PBIHAG_WDK__
+      #ifdef __BWL__
+   {    MITARBEITER_HIST_BRTG_EDITMIFID_CD,               _T("Berechtigung MiFID Daten erfasen"),                           _T("Privilege to edit MiFID Data")                            },
+      #endif  // __BWL__
+   #ifdef __CONFIRM_CUSTOMER_PROFILE_VORGESETZTER__
+   {    MITARBEITER_HIST_BRTG_VORGESETZTER_CD,            _T("Berechtigung Vorgesetzter"),                                  _T("Privilege for Superior")                                  },
+   #endif
+   #ifdef __CONFIRM_CUSTOMER_PROFILE_COMPLIANCE__
+   {    MITARBEITER_HIST_BRTG_COMPLIANCE_CD,              _T("Berechtigung Compliance"),                                    _T("Privilege for Compliance")                                },
+   #endif  //
+   #ifdef __AML_PROFIL__
+   {    MITARBEITER_HIST_BRTG_RISIKOPROFIL_CD,            _T("Berechtigung Risikoprofil bearbeiten"),                       _T("Privilege to Edit Risk Profile")                          },
+   {    MITARBEITER_HIST_BRTG_BERECHNENRISIKOPROFIL_CD,   _T("Berechtigung Risikoindex berechnen"),                         _T("Privilege to Calculate Risk Index")                       },
+      #endif  // __AML_PROFIL__
+   #ifdef __BRTG_EDITAMLPROFIL__
+   {    MITARBEITER_HIST_BRTG_EDIT_AMLPROFIL_CD,          _T("Berechtigung AML-Profil bearbeiten"),                         _T("Privilege to edit Risk Profile")                          },
+   #endif
+   #ifdef __WORLDCHECK_HITS__
+   {    MITARBEITER_HIST_BRTG_BEGRUENDENWCHITS_CD,        _T("Berechtigung Name Check neue Hits bearbeiten"),               _T("Privilege Name Check edit new hits")                      },
+   {    MITARBEITER_HIST_BRTG_BESTAETIGENWCHITS_CD,       _T("Berechtigung Name Check begründete Hits bearbeiten"),         _T("Privilege Name Check edit justified hits")                },
+   #endif  // __WORLDCHECK_HITS__
+   #ifdef __WORLDCHECK_HITS_EXT_WORKFLOW__
+   {    MITARBEITER_HIST_BRTG_ABGELEHNTWCHITS_CD,         _T("Berechtigung Name Check abgelehnte Hits bearbeiten"),         _T("Privilege Name Check edit rejected hits")                 },
+   #endif
+   #ifdef __AML_HITS__
+   {    MITARBEITER_HIST_BRTG_BEGRUENDENHITS_CD,          _T("Berechtigung AML-Hits begründen"),                            _T("Privilege to Justify AML-Hits")                           },
+   {    MITARBEITER_HIST_BRTG_BESTAETIGENHITS_CD,         _T("Berechtigung AML-Hits bestätigen"),                           _T("Privilege to Confirm AML-Hits")                           },
+   #endif  // __AML_HITS__
+   #ifdef __FATCA_HITS__
+   {    MITARBEITER_HIST_BRTG_BEGRUENDENFATCAHITS_CD,     _T("Berechtigung Fatca Regel Hits begründen"),                    _T("Privilege to justify Fatca Rule Hits")                    },
+   {    MITARBEITER_HIST_BRTG_BESTAETIGENFATCAHITS_CD,    _T("Berechtigung Fatca Regel Hits bestätigen"),                   _T("Privilege to confirm Fatca Rule Hits")                    },
+   #endif
+   #ifdef __FATCA_HITS_2__
+   {    MITARBEITER_HIST_BRTG_EROE_MAN_FATCAHITS_CD,      _T("Berechtigung manuelle Fatca Hits eröffnen"),                  _T("Privilege to open manually Fatca Hits")                    },
+   {    MITARBEITER_HIST_BRTG_BEG_MAN_FATCAHITS_CD,       _T("Berechtigung manuelle Fatca Hits begründen"),                 _T("Privilege to justify manually Fatca Hits")                 },
+   {    MITARBEITER_HIST_BRTG_BEST_MAN_FATCAHITS_CD,      _T("Berechtigung manuelle Fatca Hits bestätigen"),                _T("Privilege to confirm manually Fatca Hits")                 },
+   {    MITARBEITER_HIST_BRTG_GEN_FATCAHITS_CD,           _T("Berechtigung Fatca Hits generieren"),                         _T("Privilege to generate Fatca Hits")                         },
+   #endif
+   #ifdef __FATCA_HITS_WEG_EXT__
+   {    MITARBEITER_HIST_BRTG_BEG_RMI_FATCAHITS_CD,       _T("Berechtigung RM Inquiry Hits begründen"),                     _T("Privilege to justify RM Inquiry Hits")                     },
+   #endif
+
+   #endif  // __MITARBEITER_GRUPPE__
+
+   #ifdef __WORLDCHECK__COMPLIANCE_FIRST_NEWHIT__
+   {    MITARBEITER_HIST_WC_KONTROLLSTELLE_CD,            _T("Name Check Compliance Officer"),                              _T("Name Check Compliance Officer")                           },
+   #endif
+   #ifdef __ENFORCED_2WAY_AUTHORIZATION__
+   {    MITARBEITER_HIST_ENCRYPTION_USER_CD,              _T("Benutzer mit Verschlüsselung"),                               _T("Encryption User")                                         },
+   #endif
+   #ifdef __AML_HITS__
+   {    MITARBEITER_HIST_AML_KONTROLLSTELLE_CD,           _T("AML Kontrollstelle"),                                         _T("AML Board of control")                                    },
+   {    MITARBEITER_HIST_BRTG_MANUELLEHITS_CD,            _T("Berechtigung manuelle AML-Hits erfassen"),                    _T("Privilege to Open manually AML-Hits")                     },
+   #endif  // __AML_HITS__
+   #ifdef __EMAIL_SETTINGS__
+   {    MITARBEITER_HIST_EMAILADDRESS,                    _T("E-Mail Adresse"),                                             _T("E-Mail Address")                                          },
+   #endif  // __EMAIL_SETTINGS__
+   #ifdef __RAISE_SEC_LEVEL__
+   {    MITARBEITER_HIST_BRTG_SECLEVEL_CD,                _T("Berechtigung Erhöhen Security Level"),                        _T("Privilege to raise Security Level")                       },
+   {    MITARBEITER_HIST_MAX_SECLEVEL,                    _T("Max.Security Level"),                                         _T("Max. Security Level")                                     },
+   {    MITARBEITER_HIST_MAX_SECLEVEL_TIMEOUT,            _T("Max.Security Level Timeout (Min.)"),                          _T("Max. Security Level Timeout (Min.)")                      },
+   #endif
+   #ifdef __SCANARCHIVDOKUMENTE__
+   {    MITARBEITER_HIST_BRTG_SCANARCHIVDOKUMENTE_CD,     _T("Belege einscannen"),                                          _T("Scan Output")                                             },
+   #endif
+   #ifdef __MITARBEITER_LOESCHEN__
+   {    MITARBEITER_HIST_LOESCH_CD,                       _T("Gelöscht"),                                                   _T("Closed")                                                  },
+   {    MITARBEITER_HIST_LOESCHDATUM,                     _T("Gelöscht am"),                                                _T("Closed on")                                               },
+   {    MITARBEITER_HIST_CRTDAT,                          _T("Eröffnet am"),                                                _T("Created on")                                              },
+   {    MITARBEITER_HIST_CRTUSER,                         _T("Eröffnet durch"),                                             _T("Created by")                                              },
+   {    MITARBEITER_HIST_MUTDAT,                          _T("Geändert am"),                                                _T("Modified on")                                             },
+   {    MITARBEITER_HIST_MUTUSER,                         _T("Geändert durch"),                                             _T("Modified by")                                             },
+   #endif
+
+   #ifdef __BJBMLO__
+   {    MITARBEITER_HIST_DEPARTEMENT,                     _T("Departement"),                                                _T("Department")                                              },
+   {    MITARBEITER_HIST_ABT_NR,                          _T("Abteilungs-Nr."),                                             _T("Department No.")                                          },
+   {    MITARBEITER_HIST_ABT_KZ,                          _T("Abteilungs-Name"),                                            _T("Department Name")                                         },
+   {    MITARBEITER_HIST_OE_ID,                           _T("OE-ID"),                                                      _T("OE-ID")                                                   },
+   {    MITARBEITER_HIST_SPRACH_CD,                       _T("Sprache"),                                                    _T("Language")                                                },
+   #endif
+
+   #if defined (__AKTE_2004__) && !defined (__MITARBEITER_GRUPPE__)
+      #ifdef __AKTE_VIEW_MANAGE_SEPARATE_RIGHT__
+      {    MITARBEITER_HIST_BRTG_KAKTENNOTIZEN_CD,                 _T("Berechtigung Ansicht Aktennotizen zu Kunde"),         _T("Privilege to view Client Notes"),                                },
+      {    MITARBEITER_HIST_BRTG_KAKTENNOTIZENEDIT_CD,             _T("Berechtigung Bearbeiten Aktennotizen zu Kunde"),      _T("Privilege to manage Client Notes"),                              },
+      #else
+      {    MITARBEITER_HIST_BRTG_KAKTENNOTIZEN_CD,                 _T("Aktennotizen zu Kunde"),                              _T("Privilege to view / manage Client Notes"),                       },
+      #endif
+      {    MITARBEITER_HIST_BRTG_DKAKTENNOTIZEN_CD,                _T("Aktennotizen zu Kunde drucken"),                      _T("Privilege to print Client Notes"),                               },
+      #ifdef __AKTE_VIEW_MANAGE_SEPARATE_RIGHT__
+      {    MITARBEITER_HIST_BRTG_PAKTENNOTIZEN_CD,                 _T("Berechtigung Ansicht Aktennotizen zu Partner"),       _T("Privilege to view Individual Notes"),                            },
+      {    MITARBEITER_HIST_BRTG_PAKTENNOTIZENEDIT_CD,             _T("Berechtigung Bearbeiten Aktennotizen zu Partner"),    _T("Privilege to manage Individual Notes"),                          },
+      #else
+      {    MITARBEITER_HIST_BRTG_PAKTENNOTIZEN_CD,                      _T("Aktennotizen zu Partner"),                            _T("Privilege to view / manage Individual Notes"),                   },
+      #endif
+      {    MITARBEITER_HIST_BRTG_DPAKTENNOTIZEN_CD,                _T("Aktennotizen zu Partner drucken"),                    _T("Privilege to print Individual Notes"),                           },
+   #endif
+
+   #if defined (__BJBMLO__) && defined (__MITARBEITER_GRUPPE__)
+   {    MITARBEITER_HIST_FILIALE_CD,                      _T("Aktuelle Filiale"),                                           _T("Actual Branch")                                           },
+   {    MITARBEITER_HIST_BERECHTIGUNGSFILIALE_CD,         _T("Berechtigungs Filiale"),                                      _T("Authorization Branch")                                    },
+   #endif
+
+   #ifdef __MITARBEITER_GRUPPE__
+   {    MITARBEITER_HIST_GRUPPEID,                        _T("Gruppe"),                                                     _T("Group")                                                   },
+   #endif
+   #ifdef __GX_ENCRYPTION__
+   #ifndef __MITARBEITER_GRUPPE__
+   {    MITARBEITER_HIST_BRTG_ENC_SETUP_CD,               _T("Verschlüsselungsfelder auswählen"),                           _T("Select Crypto Fields"),                                       },
+   {    MITARBEITER_HIST_BRTG_ENCRYPT_FIELD_CD,           _T("Verschlüsselung starten"),                                    _T("Start Encryption"),                                           },
+   #ifndef __SAFENET_APPLIANCE__
+   {    MITARBEITER_HIST_BRTG_CRYPTO_ADMIN_CD,            _T("Administration Verschlüsselung"),                             _T("Crypto Administration"),                                      },
+   #endif
+   #endif
+   #endif
+   #ifdef __ENCRYPTION_PROPERTYFILE__
+   {    MITARBEITER_HIST_ENCRYPTION_PROPERTYFILE,         _T("Pfad zu Safenet Box Property Datei"),                         _T("Path to Safenet Box Property File")                       },
+   #endif
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MITARBEITER_HIST_AKTID,                           _T("AktID"),                                                      _T("AktID"),                                                      },
+   {    MITARBEITER_HIST_VALIDID,                         _T("ValidID"),                                                    _T("ValidID"),                                                    },
+   {    MITARBEITER_HIST_VALID_CD,                        _T("Validierungs Status"),                                        _T("Validierungs Status"),                                        },
+   {    MITARBEITER_HIST_VALIDUSER,                       _T("Validiert durch"),                                            _T("Validiert durch"),                                            },
+   #endif
+
+   #ifndef __MITARBEITER_GRUPPE__
+      #ifdef __SCOBAG_WDK__
+      {    MITARBEITER_HIST_BRTG_KUNDENPROFIL_CD,            _T("Berechtigung Ansicht Kunden/Partner Profil"),    _T("Authorization View Client/Individual Profile"),                       },
+      {    MITARBEITER_HIST_BRTG_AKTENNOTIZEN_CD,            _T("Berechtigung Ansicht Aktennotizen"),             _T("Authorization View Notes"),                                             },
+      #endif
+      #ifdef __CONFIRM_CUSTOMER_PROFILE_VORGESETZTER__
+      {    MITARBEITER_HIST_BRTG_VORGESETZTER_CD,            _T("Berechtigung Vorgesetzter"),                     _T("Privilege Superior OK"),                                                },
+      #endif
+      #ifdef __CONFIRM_CUSTOMER_PROFILE_COMPLIANCE__
+      {    MITARBEITER_HIST_BRTG_COMPLIANCE_CD,              _T("Berechtigung Compliance"),                       _T("Privilege Compliance OK"),                                              },
+      #endif
+      #ifdef __ALLOW_EXTERNAL_VIEWER__
+      {    MITARBEITER_HIST_BRTG_USE_INTERNER_VIEWER_CD,     _T("Berechtigung externer ASCII-Viewer verwenden"),  _T("ASCII Viewer authorisation"),                                           },
+      {    MITARBEITER_HIST_BRTG_USE_ACROBAT_READER_CD,      _T("Berechtigung Acrobat Reader verwenden"),         _T("Acrobat Reader authorisation"),                                         },
+      #endif
+      #if defined(__TOOLS__) && defined(__CL_SEARCH__)
+      {    MITARBEITER_HIST_BRTG_CLSEARCH_CD,                _T("CLSearch Starten"),                              _T("CLSearch Start"),                                                       },
+      #endif
+   #endif
+
+   #if MITARBEITER_HIST_EXTERNAL_USER > 0
+   {    MITARBEITER_HIST_EXTERNAL_USER,                   _T("External User"),                                              _T("External User"),                                              },
+   #endif
+   #if defined  (__MAPI_EMAIL__) || defined(__BLAT_DISCLAIMER__)
+   {    MITARBEITER_HIST_SIGNATUR,                        _T("E-Mail Signatur"),                                            _T("E-Mail Signatur"),                                            },
+   {    MITARBEITER_HIST_SIGNATUR_SENDEN_CD,              _T("E-Mail Signatur senden"),                                     _T("E-Mail Signatur senden"),                                     },
+   {    MITARBEITER_HIST_DISCLAIMER_SENDEN_CD,            _T("E-Mail Disclaimer senden"),                                   _T("E-Mail Disclaimer senden"),                                   },
+   #endif
+   #ifdef __AKTETODOLISTE_BEREICH__
+   {    MITARBEITER_HIST_BEREICH_CD,                      _T("ToDo-Bereich"),                                               _T("ToDo-Department"),                                                },
+   #endif
+   #ifdef __UBS_WDK__
+   {    MITARBEITER_HIST_KUNDENBERATER_CD,                _T("Kundenbearter (WMC)"),                                        _T("Kundenbearter (WMC)"),                                        },
+   {    MITARBEITER_HIST_COMPLIANCE_CD,                   _T("Risk & Compliance (LRC)"),                                    _T("Risk & Compliance (LRC)"),                                    },
+   #endif
+   #ifdef __AML_HITS_IN_ABKLAERUNG__
+   {    MITARBEITER_HIST_COMPLIANCE_LEITER_CD,            _T("Compliance Leiter"),                                          _T("Leader Compliance")                                           },
+   #endif
+   #ifdef __LIFECYCLE_MANAGEMENT__
+   {    MITARBEITER_HIST_LIFECYCLE_MANAGER_CD,            _T("Lifecycle Manager"),                                          _T("Lifecycle Manager"),                                           },
+   #endif
+   #ifdef __XML_SIGNATURE__
+   #ifndef __MITARBEITER_GRUPPE__
+   {    MITARBEITER_HIST_BRTG_SIGN_SETUP_CD,              _T("Berechtigung Felder für Signatur auswählen"),                 _T("Privilege to select signature fields"),                       },
+   #endif
+   #endif
+   #if defined (__CSM_KUNDE_APPROVAL__)
+   {    MITARBEITER_HIST_BRTG_RM_CD,                      _T("Approval RM"),                                                _T("Approval RM"),                               },
+   {    MITARBEITER_HIST_BRTG_TH_CD,                      _T("Approval TH"),                                                _T("Approval TH"),                               },
+   {    MITARBEITER_HIST_BRTG_CSF_CD,                     _T("Approval CSF"),                                               _T("Approval CSF"),                              },
+   {    MITARBEITER_HIST_BRTG_CP_CD,                      _T("Approval CP"),                                                _T("Approval CP"),                               },
+   {    MITARBEITER_HIST_BRTG_CP_BRANCH_CD,               _T("Approval CP Branch"),                                         _T("Approval CP Branch"),                        },
+   {    MITARBEITER_HIST_BRTG_AM_CD,                      _T("Approval AM"),                                                _T("Approval AM"),                               },
+   {    MITARBEITER_HIST_BRTG_AOC_CD,                     _T("Approval AOC"),                                               _T("Approval AOC"),                              },
+   {    MITARBEITER_HIST_BRTG_OPS_CD,                     _T("Approval OPS"),                                               _T("Approval OPS"),                              },
+   {    MITARBEITER_HIST_BRTG_CSF2_CD,                    _T("Approval CSF (Final Verification)"),                          _T("Approval CSF (Final Verification)"),         },
+   #elif defined (__OPENING_APPROVAL__)
+   {    MITARBEITER_HIST_BRTG_STEP1_CD,                   _T("Approval Step 1"),                                            _T("Approval Step 1"),                           },
+   {    MITARBEITER_HIST_BRTG_STEP2_CD,                   _T("Approval Step 2"),                                            _T("Approval Step 2"),                           },
+   {    MITARBEITER_HIST_BRTG_STEP3_CD,                   _T("Approval Step 3"),                                            _T("Approval Step 3"),                           },
+   {    MITARBEITER_HIST_BRTG_STEP4_CD,                   _T("Approval Step 4"),                                            _T("Approval Step 4"),                           },
+   {    MITARBEITER_HIST_BRTG_STEP5_CD,                   _T("Approval Step 5"),                                            _T("Approval Step 5"),                           },
+   #endif
+   #ifdef __USER_APPROVAL__
+   {    MITARBEITER_HIST_APPROVALNR,                      _T("Approval Nummer"),                                            _T("Approval number")                                             },
+   {    MITARBEITER_HIST_APPROVAL_CD,                     _T("Approval Status"),                                            _T("Approval status")                                             },
+   {    MITARBEITER_HIST_APPROVAL_USER,                   _T("Approval durch"),                                             _T("Approval by")                                                 },
+   {    MITARBEITER_HIST_APPROVAL_DATE,                   _T("Approval am"),                                                _T("Approval on")                                                 },
+   {    MITARBEITER_HIST_APPROVAL_DOCUMENTNR,             _T("Approval Dokumentennr"),                                      _T("Approval document number")                                    },
+   #endif
+   #if MITARBEITER_HIST_LDAP_USERID > 0
+   {    MITARBEITER_HIST_LDAP_USERID,                     _T("LDAP UserId"),                                                _T("LDAP UserId"),      },
+   #endif
+   {    MITARBEITER_HIST_FUNKTION,                        _T("Funktion"),                                                   _T("Function")                                                },
+   {    MITARBEITER_HIST_HIST_DATUM,                      _T("Historisiert am"),                                            _T("Audit Logged on")                                         },
+   {    MITARBEITER_HIST_HIST_USER,                       _T("Historisiert durch"),                                         _T("Audit Logged by")                                         },
+
+   #ifdef __XML_SIGNATURE__
+   {    MITARBEITER_SIGNCERT_HIST,                        _T("Signatur Zertifikat History"),                                _T("Granted Signature Certificates History"),                     },
+   {    MSC_HIST_USERID,                                  _T("Mitarbeiter Id"),                                             _T("User Id"),                                                    },
+   {    MSC_HIST_CERT_CD,                                 _T("Zertifikat"),                                                 _T("Certificate"),                                                },
+   {    MSC_HIST_CERTID,                                  _T("Signatur Zertifikat Zuweisung ID"),                           _T("Permitted on Cert-ID"),                                       },
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MSC_HIST_LOESCH_CD,                               _T("Gelöscht"),                                                   _T("Deleted"),                                                    },
+   {    MSC_HIST_LOESCHDATUM,                             _T("Gelöscht am"),                                                _T("Deleted on"),                                                 },
+   {    MSC_HIST_LOESCHUSER,                              _T("Gelöscht durch"),                                             _T("Deleted by"),                                                 },
+   {    MSC_HIST_CRTDATUM,                                _T("Erstellt am"),                                                _T("Created on"),                                                 },
+   {    MSC_HIST_CRTUSER,                                 _T("Erstellt durch"),                                             _T("Created by"),                                                 },
+   {    MSC_HIST_MUTDATUM,                                _T("Geändert am"),                                                _T("Modified on"),                                                },
+   {    MSC_HIST_MUTUSER,                                 _T("Geändert durch"),                                             _T("Modified by"),                                                },
+   {    MSC_HIST_AKTID,                                   _T("AktID"),                                                      _T("AktID"),                                                      },
+   {    MSC_HIST_VALIDID,                                 _T("ValidID"),                                                    _T("ValidID"),                                                    },
+   {    MSC_HIST_VALID_CD,                                _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    MSC_HIST_VALIDUSER,                               _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   {    MSC_HIST_FUNKTION,                                _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    MSC_HIST_HIST_DATUM,                              _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    MSC_HIST_HIST_USER,                               _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #endif
+#endif
+
+#if defined (__ADMIN_TAB_HISTORY__) || defined (__ADMINHISTORY__)
+  #ifdef __MITARBEITER_GRUPPE__
+   {    MGRUPPE_HIST,                                     _T("Mitarbeitergruppe History"),                                  _T("Users Group History"),                                        },
+   {    MGRUPPE_HIST_GRUPPEID,                            _T("GruppeID"),                                                   _T("GroupId"),                                                    },
+   {    MGRUPPE_HIST_GRUPPE_NAME,                         _T("Gruppe"),                                                     _T("Group"),                                                      },
+   {    MGRUPPE_HIST_BRTG_EDTADMIN_CD,                    _T("Administrator bearbeiten"),                                   _T("Edit Administrator"),                                         },
+   {    MGRUPPE_HIST_BRTG_EDTMITARBEITER_CD,              _T("Mitarbeitergruppe bearbeiten"),                               _T("Edit Users Group"),                                           },
+   #if defined (__VALIDIERUNG__) && !defined (__DISABLE_VALIERUNG__) || defined (__VALIDIERUNG_MITARBEITER__)
+      {    MGRUPPE_HIST_BRTG_VALIDIEREN_CD,                  _T("Validieren"),                                                 _T("Validate Data"),                                              },
+   #endif
+   #if !defined (__NOARCHIVE__)
+      {    MGRUPPE_HIST_BRTG_TAGESVERSAND_CD,                _T("Tagesversand"),                                               _T("Daily Mailing"),                                              },
+      {    MGRUPPE_HIST_BRTG_EMAILBELEG_CD,                  _T("E-Mail Beleg versenden"),                                     _T("Send Output by E-Mail"),                                      },
+   #endif
+   {    MGRUPPE_HIST_BRTG_EDTKUNDE_CD,                    _T("Kunde bearbeiten"),                                           _T("Edit Client / Portfolio"),                                    },
+   {    MGRUPPE_HIST_BRTG_EDTKPROFIL_CD,                  _T("Kundenprofil bearbeiten"),                                    _T("Edit Client Profile"),                                        },
+   {    MGRUPPE_HIST_BRTG_DRUCKENKPROFIL_CD,              _T("Kundenprofil drucken"),                                       _T("Print Client Profile"),                                       },
+   {    MGRUPPE_HIST_BRTG_PBEZIEHUNGEN_CD,                _T("Partnerbeziehungen erfassen"),                                _T("Create / Edit Individual Relationship"),                      },
+   {    MGRUPPE_HIST_BRTG_KAKTENNOTIZEN_CD,               _T("Aktennotizen zu Kunde erfassen"),                             _T("Create Client Notes"),                                        },
+   {    MGRUPPE_HIST_BRTG_DKAKTENNOTIZEN_CD,              _T("Aktennotizen zu Kunde drucken"),                              _T("Print Client Notes"),                                         },
+   {    MGRUPPE_HIST_BRTG_KDOKUMENTE_CD,                  _T("Kundendokumente erfassen"),                                   _T("Create / Edit Legal Document"),                               },
+   {    MGRUPPE_HIST_BRTG_DKDOKUMENTE_CD,                 _T("Kundendokumente drucken"),                                    _T("Print Legal Document"),                                       },
+   #ifdef __KUNDENDECKBLATTDRUCKEN__
+   #ifndef __BJBMLO__
+   {    MGRUPPE_HIST_BRTG_DKSCANNINGDECKBLATT_CD,         _T("Scanning Deckblatt drucken"),                                 _T("Print Scanning Cover Sheet")                              },
+   #endif
+   #endif
+   #ifdef __BBVA_WDK__
+   {    MGRUPPE_HIST_BRTG_DKORDOKUMENTE_CD,               _T("Korrespondenzdokumente drucken"),                             _T("Print Correspondence"),                                       },
+   #endif
+   {    MGRUPPE_HIST_BRTG_SKDOKUMENTE_CD,                 _T("Kundendokumente einscannen"),                                 _T("Scan Legal Document"),                                        },
+   {    MGRUPPE_HIST_BRTG_VERSANDINSTR_CD,                _T("Versandinstruktionen erfassen"),                              _T("Edit Mailing Instruction"),                                   },
+   {    MGRUPPE_HIST_BRTG_KUNDENSTICHWORT_CD,             _T("Kundenstichwort erfassen"),                                   _T("Create Client Keyword"),                                      },
+   {    MGRUPPE_HIST_BRTG_KORRESPONDENZ_CD,               _T("Korrespondenz erfassen"),                                     _T("Create / Edit Correspondence"),                               },
+   {    MGRUPPE_HIST_BRTG_PARTNERDATEN_CD,                _T("Partnerdaten erfassen"),                                      _T("Create / Edit Individual Data"),                              },
+   {    MGRUPPE_HIST_BRTG_PARTNERPROFIL_CD,               _T("Partnerprofil erfassen"),                                     _T("Edit Individual Profile"),                                    },
+   {    MGRUPPE_HIST_BRTG_KUNDENBEZIEHUNGEN_CD,           _T("Kundenbeziehungen erfassen"),                                 _T("Create / Edit Client Relationship"),                          },
+   {    MGRUPPE_HIST_BRTG_PARTNERDOKUMENTE_CD,            _T("Partnerdokumente erfassen"),                                  _T("Create / Edit Individual Document"),                          },
+   {    MGRUPPE_HIST_BRTG_DPARTNERDOKUMENTE_CD,           _T("Partnerdokumente drucken"),                                   _T("Print Individual Document"),                                  },
+   {    MGRUPPE_HIST_BRTG_SPARTNERDOKUMENTE_CD,           _T("Partnerdokumente einscannen"),                                _T("Scan Individual Document"),                                   },
+   {    MGRUPPE_HIST_BRTG_DRUCKENADRESSEN_CD,             _T("Adressen drucken"),                                           _T("Print Addresses"),                                            },
+   #if MGRUPPE_HIST_BRTG_DRUCKENADRESSLISTEN_CD > 0
+   {    MGRUPPE_HIST_BRTG_DRUCKENADRESSLISTEN_CD,         _T("Adresslisten drucken"),                                       _T("Print Address Lists"),                                        },
+   #endif
+   {    MGRUPPE_HIST_BRTG_PAKTENNOTIZEN_CD,               _T("Aktennotizen zu Partner erfassen"),                           _T("Create Individual Notes"),                                    },
+   {    MGRUPPE_HIST_BRTG_DPAKTENNOTIZEN_CD,              _T("Aktennotizen zu Partner drucken"),                            _T("Print Individual Notes"),                                     },
+   {    MGRUPPE_HIST_BRTG_PARTNERPARTNER_CD,              _T("Partner/Partner-Beziehungen erfassen"),                       _T("Create / Edit Individual Relationship to Individual"),        },
+   {    MGRUPPE_HIST_BRTG_PARTNERSTICHWORT_CD,            _T("Partnerstichwort erfassen"),                                  _T("Create Individual Keyword"),                                  },
+   #ifdef __ZUGRIFFSREGELUNG_CD__
+   {    MGRUPPE_HIST_ZUGRIFFSREGELUNG_CD,                 _T("Zugriffsregelung"),                                           _T("Access Rule")                                                 },
+   #else
+   {    MGRUPPE_HIST_SUPERUSER_CD,                        _T("Superuser"),                                                  _T("Superuser"),                                                  },
+   {    MGRUPPE_HIST_BACKOFFICEUSER_CD,                   _T("Back-Office User"),                                           _T("Back-Office User"),                                           },
+   {    MGRUPPE_HIST_VERTRAULICHKEIT_CD,                  _T("Vertraulichkeit"),                                            _T("Security Level"),                                             },
+   #ifdef __ITUSER__
+   {    MGRUPPE_HIST_ITUSER_CD,                           _T("IT-User"),                                                    _T("IT-User"),                                                    },
+   #endif
+   #endif
+   #ifdef __LBLUX_WDK__
+   {    MGRUPPE_HIST_BRTG_SENSIBLEDATEN_CD,               _T("Sensible Daten auf Listen"),                                  _T("Sensitive Data visible on lists"),                            },
+   {    MGRUPPE_HIST_BRTG_ANLAGEPROFIL_CD,                _T("Anlageprofil erfassen"),                                      _T("Anlageprofil erfassen"),                                      },
+   {    MGRUPPE_HIST_BRTG_VALIDIERENPROFIL_CD,            _T("Profildaten validieren"),                                     _T("Validate Profile Data"),                                      },
+   #endif
+   {    MGRUPPE_HIST_BRTG_ADRESSE_CD,                     _T("Adressen erfassen"),                                          _T("Create / Edit Addresses"),                                    },
+   {    MGRUPPE_HIST_BRTG_KOMMUNIKATION_CD,               _T("Kommunikationsnummern erfassen"),                             _T("Create / Edit Communication No."),                            },
+   {    MGRUPPE_HIST_BRTG_UNTERSCHRIFT_CD,                _T("Unterschriften erfassen"),                                    _T("Scan Signatures"),                                            },
+   {    MGRUPPE_HIST_BRTG_BANKPOST_CD,                    _T("Bankpost bestellen/bearbeiten"),                              _T("Order Hold-Mail"),                                            },
+   #ifdef __MAILING_CONFIGURATION__
+   {    MGRUPPE_HIST_BRTG_MODIFYSPECIALINST_CD,           _T("Sonderinstruktionen ändern"),                                 _T("Modify Special Instructions")                                 },
+   #endif
+   {    MGRUPPE_HIST_BRTG_SALDIEREN_CD,                   _T("Kunde/Portfolio saldieren"),                                  _T("Close Client / Portfolio"),                                   },
+   {    MGRUPPE_HIST_BRTG_DRUCKEN_CD,                     _T("Listen drucken"),                                             _T("Print Addresses / Lists"),                                    },
+   #if !defined (__NOARCHIVE__)
+   {    MGRUPPE_HIST_BRTG_DRUCKENBELEG_CD,                _T("Belege drucken"),                                             _T("Print Advices"),                                              },
+   {    MGRUPPE_HIST_BRTG_DRUCKENBELEGPDF_CD,             _T("PDF-Belege drucken"),                                         _T("Print Advices from Acrobat"),                                 },
+   #endif
+   {    MGRUPPE_HIST_BRTG_CONFIGACCLISTE_CD,              _T("Kundenliste konfigurieren"),                                  _T("Edit Client List"),                                           },
+   {    MGRUPPE_HIST_BRTG_CONFIGPARLISTE_CD,              _T("Partnerliste konfigurieren"),                                 _T("Edit Individual List"),                                       },
+   #ifdef __GXMISLIST_DB__
+   {    MGRUPPE_HIST_BRTG_EDIT_MISLISTE_CD,               _T("MIS Listen bearbeiten"),                                      _T("Edit MIS Lists")                                          },
+   #endif
+   #ifdef __GXMISLIST_DB_02__
+   {    MGRUPPE_HIST_BRTG_EDIT_SUPERSQL_MISLISTE_CD,      _T("MIS SuperSQL Listen bearbeiten"),                             _T("Edit MIS SuperSQL Lists")                                 },
+   #endif
+   #ifdef __GXQUERY_SQLSTATEMENT__
+   {    MGRUPPE_HIST_BRTG_ADD_SQL_CD,                     _T("SQL Anweisungen hinzufügen"),                                 _T("Add SQL Statements")                                      },
+   #endif
+   #ifdef __BJB_CIN__
+   {    MGRUPPE_HIST_BRTG_DRUCKENNOTEPAD_CD,              _T("Kunde Notepad drucken"),                                      _T("Print Client Notepad")                                    },
+   {    MGRUPPE_HIST_BRTG_CIN_TAB_CD,                     _T("CIN Daten anzeigen / editieren"),                             _T("View / Edit CIN Data")                                    },
+   #endif
+   {    MGRUPPE_HIST_BRTG_ALLTABLES_CD,                   _T("Alle Tabellen sichtbar"),                                     _T("All Tables visible"),                                         },
+   #ifdef __TELEFONIE__
+   {    MGRUPPE_HIST_BRTG_TELEFON_CD,                     _T("Telefonapplikation"),                                         _T("Phone"),                                                      },
+   {    MGRUPPE_HIST_BRTG_TELDEKIS_CD,                    _T("Zugriff auf Dekis Telefon-Nr."),                              _T("Access on Dekis Phone No."),                                  },
+   #ifndef __BHF_STYLE__
+   {    MGRUPPE_HIST_BRTG_TELMITARBEITER_CD,              _T("Aendern von Mitarbeiter Telefon-Nr."),                        _T("Edit User Phone No.")                                     },
+   #endif
+   {    MGRUPPE_HIST_BRTG_TELFIRMA_CD,                    _T("Zugriff auf Firmen Telefon-Nr."),                             _T("Access on Company Phone No."),                                },
+   {    MGRUPPE_HIST_BRTG_TELTRADER_CD,                   _T("Zugriff auf Trader Telefon-Nr."),                             _T("Access on Trader Phone No."),                                 },
+   #endif
+   {    MGRUPPE_HIST_BRTG_MANUELLEKTOE_CD,                _T("Kunde/Portfolio eröffnen"),                                   _T("Open Client / Portfolio"),                                    },
+   {    MGRUPPE_HIST_BRTG_VERSANDAUSARCHIV_CD,            _T("Versand aus Archiv"),                                         _T("Mail out of Archive"),                                        },
+   {    MGRUPPE_HIST_BRTG_SERIENBRIEF_CD,                 _T("Serienbrief erstellen"),                                      _T("Create Mail Merge"),                                          },
+   {    MGRUPPE_HIST_BRTG_ERFASSEN_KTOE_CD,               _T("Kundeneröffnung erfassen"),                                   _T("Create / Edit Client Opening"),                               },
+   #if defined (__WMA_PROSPECTS__)  || defined (__BBB_WDK__)
+   {    MGRUPPE_HIST_BRTG_ERFASSEN_PROSPECT_CD,           _T("Prospect erfassen"),                                          _T("Open Prospects")                                              },
+   #endif
+   #if  defined (__BBB_WDK__)
+   {    MGRUPPE_HIST_BRTG_INAKTIV_PROSPECT_CD,            _T("Prospect inaktivieren"),                                      _T("Inactive Prospects")                                          },
+   #endif
+   #ifdef __WINDEKIS_MASTER__
+   {    MGRUPPE_HIST_BRTG_EDIT_PORTFOLIONO_CD,            _T("Manuelle Portfolio-Nr./ Kunden-Nr. erfassen"),                _T("Open manually Portfolio No. / Client No. manually")       },
+   #endif
+   {    MGRUPPE_HIST_BRTG_DRUCKEN_KTOE_CD,                _T("Kundeneröffnung drucken"),                                    _T("Print Account Opening"),                                      },
+   {    MGRUPPE_HIST_BRTG_DRUCKEN_KLISTE_CD,              _T("Kundenliste drucken"),                                        _T("Print Client List"),                                          },
+   {    MGRUPPE_HIST_BRTG_DRUCKEN_PLISTE_CD,              _T("Partnerliste drucken"),                                       _T("Print Individual List"),                                      },
+   #ifdef __CSM_WDK__
+   {    MGRUPPE_HIST_BRTG_EDIT_PROFILE_K_OPENED_CD,       _T("Edit Profile after Client is opened"),                        _T("Edit Profile after Client is opened")                         },
+   {    MGRUPPE_HIST_BRTG_DEFICIENCES_LIST_CD,            _T("Deficiencies Liste"),                                         _T("Deficiencies List"),                                          },
+   {    MGRUPPE_HIST_BRTG_LEGAL_DOCUMENT_LIST_CD,         _T("Legal Document List"),                                        _T("Legal Document List")                                         },
+   {    MGRUPPE_HIST_BRTG_CORRESPONDENCE_LIST_CD,         _T("Correspondence List"),                                        _T("Correspondence List")                                         },
+   #endif
+   #ifdef __BJBMLO__
+   {    MGRUPPE_HIST_BRTG_PARTNER_CLIENT_CD,              _T("Zugriff auf alle Kunden / Partner"),                          _T("Access to all ZR/Individuals"),                               },
+   {    MGRUPPE_HIST_BRTG_WORLDCHECK_CATEGORY_CD,         _T("Auswahl World-Check Kategorie"),                              _T("Selection of World-Check Category")                       },
+   {    MGRUPPE_HIST_BRTG_WORLDCHECK_ADDITIONAL_CD,       _T("Zugriff auf World-Check Additional Info"),                    _T("Access on World-Check Additional Info")                   },
+   {    MGRUPPE_HIST_BRTG_DRUCKEN_RISK_CD,                _T("Risk Kunden drucken"),                                        _T("Reporting Risk Clients")                                  },
+   {    MGRUPPE_HIST_BRTG_AMF_APPROVAL_CD,                _T("AMF Gruppe (Force Region Head Approval)"),                    _T("AMF Group (Force Region Head Approval)")                  },
+   {    MGRUPPE_HIST_BRTG_CREATE_PRINT_CD,                _T("Create Client Detail Print for Review Portfolios"),           _T("Create Client Detail Print for Review Portfolios")        },
+   #endif
+   #ifdef __WEG__
+   {    MGRUPPE_HIST_BRTG_MONATSVERSAND_CD,               _T("Periodischer Versand drucken"),                               _T("Print Periodical Output"),                                    },
+   #endif
+   #ifdef __ERTRAEGNISAUFSTELLUNG__
+   {    MGRUPPE_HIST_BRTG_ERTRAG_CD,                      _T("Ertragsaufstellung bearbeiten"),                              _T("Ertragsaufstellung bearbeiten"),                              },
+   #endif
+   #ifdef __WORLDCHECK__
+   {    MGRUPPE_HIST_BRTG_WORLDCHECK_CD,                  _T("World-Check"),                                                _T("World-Check"),                                                },
+   #endif
+   #if MGRUPPE_HIST_BRTG_IMPORT_WORLDCHECK_CD > 0
+   {    MGRUPPE_HIST_BRTG_IMPORT_WORLDCHECK_CD,           _T("World-Check Daten laden"),                                    _T("Load World-Check Data"),                                      },
+   #endif
+   #if MGRUPPE_HIST_BRTG_EDIT_WORLDCHECK_CD > 0
+   {    MGRUPPE_HIST_BRTG_EDIT_WORLDCHECK_CD,             _T("World-Check Daten bearbeiten"),                               _T("Edit World-Check Data"),                                      },
+   #endif
+
+   #if defined (__AUMREPORTING__)
+   #if MGRUPPE_HIST_BRTG_IMPORT_AUMCHECK_CD > 0
+   {    MGRUPPE_HIST_BRTG_IMPORT_AUMCHECK_CD,             _T("AuM Werte laden"),                                            _T("Load AuM Data"),                                              },
+   #endif
+   #if MGRUPPE_HIST_BRTG_EDIT_AUMCHECK_CD > 0
+   {    MGRUPPE_HIST_BRTG_EDIT_AUMCHECK_CD,               _T("AuM Werte bearbeiten"),                                       _T("Edit AuM Data"),                                              },
+   #endif
+   #endif
+
+   #ifdef __PARTNER_DUBLETTEN__
+   {    MGRUPPE_HIST_BRTG_PARTNERDUBLETTEN_CD,            _T("Partner Dubletten bearbeiten"),                               _T("Privilige for partner double finder")                     },
+   #endif
+   #ifdef __EXTERNE_QUELLEN__
+   {    MGRUPPE_HIST_BRTG_EXTERNEQUELLEN_CD,              _T("Externe Quellen"),                                            _T("External Sources"),                                           },
+   {    MGRUPPE_HIST_BRTG_IMPORT_EXTERNEQUELLEN_CD,       _T("Externe Quellen Daten laden"),                                _T("Load External Sources Data"),                                 },
+   #endif
+   #if MGRUPPE_HIST_BRTG_EUTAXREPORTING_CD > 0
+   {    MGRUPPE_HIST_BRTG_EUTAXREPORTING_CD,              _T("EU Tax Reporting"),                                           _T("Privilege for EU Tax Reporting")                          },
+   #endif
+   {    MGRUPPE_HIST_BRTG_VERIFIKATION_CD,                _T("Verifikation"),                                               _T("Verification"),                                               },
+
+   #ifdef __AML_HITS__
+   {    MGRUPPE_HIST_BRTG_BEGRUENDENHITS_CD,              _T("AML-Hits begründen"),                                         _T("Justify AML-Hits"),                                           },
+   {    MGRUPPE_HIST_BRTG_BESTAETIGENHITS_CD,             _T("AML-Hits bestätigen"),                                        _T("Confirm AML-Hits"),                                           },
+   {    MGRUPPE_HIST_BRTG_MANUELLEHITS_CD,                _T("Manuelle AML-Hits erfassen"),                                 _T("Enter manual AML-Hits"),                                      },
+   #endif
+
+   #ifdef __WORLDCHECK_HITS__
+   {    MGRUPPE_HIST_BRTG_BEGRUENDENWCHITS_CD,            _T("Name Check Neue Hits bearbeiten"),                             _T("Name Check edit new hits"),                                  },
+   {    MGRUPPE_HIST_BRTG_BESTAETIGENWCHITS_CD,           _T("Name Check Begründete Hits bestätigen"),                       _T("Name Check confirm justified hits"),                         },
+   #endif
+   #ifdef __WORLDCHECK_HITS_EXT_WORKFLOW__
+   {    MGRUPPE_HIST_BRTG_ABGELEHNTWCHITS_CD,             _T("Name Check Abgelehnte Hits bearbeiten"),                       _T("Name Check edit rejected hits"),                             },
+   #endif
+   #ifdef __FATCA_HITS__
+   {    MGRUPPE_HIST_BRTG_BEGRUENDENFATCAHITS_CD,         _T("Fatca Regel Hits begründen"),                                  _T("Justify Fatca Rule Hits"),                                   },
+   {    MGRUPPE_HIST_BRTG_BESTAETIGENFATCAHITS_CD,        _T("Fatca Regel Hits bestätigen"),                                 _T("Confirm Fatca Rule Hits"),                                   },
+   #endif
+   #ifdef __FATCA_HITS_2__
+   {    MGRUPPE_HIST_BRTG_EROE_MAN_FATCAHITS_CD,         _T("Manuelle Fatca Hits eröffnen"),                                 _T("Open manually Fatca Hits")                       },
+   {    MGRUPPE_HIST_BRTG_BEG_MAN_FATCAHITS_CD,          _T("Manuelle Fatca Hits begründen"),                                _T("Justify manually Fatca Hits")                    },
+   {    MGRUPPE_HIST_BRTG_BEST_MAN_FATCAHITS_CD,         _T("Manuelle Fatca Hits bestätigen"),                               _T("Confirm manually Fatca Hits")                    },
+   {    MGRUPPE_HIST_BRTG_GEN_FATCAHITS_CD,              _T("Fatca Hits generieren"),                                        _T("Generate Fatca Hits")                             },
+   #endif
+   #ifdef __CONFIRM_CUSTOMER_PROFILE_MGRUPPE_VORGESETZTER__
+   {    MGRUPPE_HIST_BRTG_VORGESETZTER_CD,                _T("Vorgesetzter"),                                               _T("Vorgesetzter"),                                               },
+   #endif
+   #ifdef __CONFIRM_CUSTOMER_PROFILE_MGRUPPE_COMPLIANCE__
+   {    MGRUPPE_HIST_BRTG_COMPLIANCE_CD,                  _T("Compliance"),                                                 _T("Compliance"),                                                 },
+   #endif
+
+   #if defined (__DBL__) && defined (__DBL_USTAX__)
+   {    MGRUPPE_HIST_BRTG_US_TAX_MANUELL_CD,              _T("US Steuer manuell erfassen"),                                 _T("US Steuer manuell erfassen"),                                 },
+   #endif
+   #ifdef __DBL__
+   {    MGRUPPE_HIST_BRTG_EUZST_MANUELL_CD,               _T("EU Zinssteuer manuell erfassen"),                             _T("Enter manually EU tax on interest"),                          },
+   #endif
+
+   #ifdef __AML_PROFIL__
+   {    MGRUPPE_HIST_BRTG_RISIKOPROFIL_CD,                _T("Risikoprofil bearbeiten"),                                    _T("Edit risk profile"),                                          },
+   #endif
+   #if defined (__AML_PROFIL__) || defined (__RISKINDEX_CALCULATION__)
+   {    MGRUPPE_HIST_BRTG_BERECHNENRISIKOPROFIL_CD,       _T("Risikoindex berechnen"),                                      _T("Compute Risk index"),                                         },
+   #endif
+   #ifdef __BRTG_EDITAMLPROFIL__
+   {    MGRUPPE_HIST_BRTG_EDIT_AMLPROFIL_CD,              _T("Berechtigung AML-Profil bearbeiten"),                         _T("Privilege to edit Risk Profile")                          },
+   #endif
+   #ifdef __PARTNER_KOPIEREN__
+   {    MGRUPPE_HIST_BRTG_PARTNERKOPIEREN_CD,             _T("Partner kopieren"),                                           _T("Copy Individuals")                                        },
+   #endif
+   #if (MGRUPPE_BRTG_KUNDENSUCHE_CD > 0)
+   {    MGRUPPE_HIST_MGRUPPE_BRTG_KUNDENSUCHE_CD,         _T("Kundensuche"),                                                _T("Client Query")                                            },
+   #endif
+   #if MGRUPPE_BRTG_BESUCHSSHEET_CD > 0
+   {    MGRUPPE_HIST_MGRUPPE_BRTG_BESUCHSSHEET_CD,        _T("Abruf Besuchssheet"),                                         _T("Get Visitreport")                                         },
+   #endif
+   #ifdef __AKTENANFORDERUNG__
+   {    MGRUPPE_HIST_BRTG_AKTENANFORDERUNG_CD,            _T("Abruf Aktenanforderung"),                                     _T("Get Notesrequest"),                                           },
+   #endif
+   #ifdef __SCHLIESSFACH__
+   {    MGRUPPE_HIST_BRTG_SCHLIESSFACH_CD,                _T("Schliessfächer erfassen"),                                    _T("Create / Edit Safe Deposit Box Data")                     },
+   #endif
+   #ifdef __GX_USER_CONFIRMATION__
+   {    MGRUPPE_HIST_BRTG_PRINT_SENSITIVE_DATA_CD,        _T("Sensible Daten drucken"),                                     _T("Print Sensitive Data")                                    },
+   #endif
+   #ifdef __CUBIS__
+   {    MGRUPPE_HIST_BRTG_CUBIS_CD,                       _T("Cubis Daten anzeigen"),                                       _T("Display Cubis Data")                                      },
+   #endif
+   #ifdef __ALLOW_EXTERNAL_VIEWER__
+   {    MGRUPPE_HIST_BRTG_USE_INTERNER_VIEWER_CD,         _T("Interner Text-Viewer verwenden"),                             _T("Use internal Text-Viewer")                                },
+   {    MGRUPPE_HIST_BRTG_USE_ACROBAT_READER_CD,          _T("Acrobat Reader als PDF-Viewer verwenden"),                    _T("Use Acrobat Reader as PDF-Viewer")                        },
+   #endif
+   #if defined(__TOOLS__) && defined(__CL_SEARCH__)
+   {    MGRUPPE_HIST_BRTG_CLSEARCH_CD,                    _T("CLSearch Starten"),                                           _T("CLSearch Start")                                          },
+   #endif
+   #if defined (__WEBARCHIV__)
+   {    MGRUPPE_HIST_BRTG_BESTELLEN_WEB_CD,               _T("Belege für Web-Archiv bestellen"),                            _T("Order Output for Web Archive")                            },
+   #endif
+   #if defined (__WEBARCHIV__) || defined (__EMAILVERSAND__)
+   {    MGRUPPE_HIST_BRTG_TRANSFEROUT_CD,                 _T("Online / Fax / E-Mail Monitor"),                              _T("Online / Fax / E-Mail Monitor")                           },
+   #endif
+   #ifdef __VALIDIERUNG_AENDERN_VALIDIEREN__
+   {    MGRUPPE_HIST_BRTG_AENDERN_VALIDIEREN_CD,          _T("Ändern/Validieren"),                                          _T("Edit/Validate Data")                                      },
+   #endif
+   #ifdef __ADMIN_AENDERN_PASSWORT__
+   {    MGRUPPE_HIST_BRTG_AENDERN_PASSWORT_CD,            _T("Mitarbeiter Passwort ändern"),                                _T("Edit User Password")                                      },
+   #endif
+   #ifdef __DISABLE_PRTSCR__
+   {    MGRUPPE_HIST_BRTG_PRTSCR_CD,                      _T("Screenshot-Taste"),                                           _T("Capture Screen")                                          },
+   #endif
+   {    MGRUPPE_HIST_LOESCH_CD,                           _T("Gelöscht"),                                                   _T("Group Closed"),                                               },
+   {    MGRUPPE_HIST_LOESCHDATUM,                         _T("Gelöscht am"),                                                _T("Group Closed On"),                                            },
+   {    MGRUPPE_HIST_CRTDAT,                              _T("Erstellt am"),                                                _T("Group Opened on"),                                            },
+   {    MGRUPPE_HIST_CRTUSER,                             _T("Erstellt durch"),                                             _T("Group Opened by"),                                            },
+   {    MGRUPPE_HIST_MUTDAT,                              _T("Geändert am"),                                                _T("Group Modified on"),                                          },
+   {    MGRUPPE_HIST_MUTUSER,                             _T("Geändert durch"),                                             _T("Group Modified by"),                                          },
+   #ifdef __GX_ENCRYPTION__
+   {    MGRUPPE_HIST_BRTG_ENC_SETUP_CD,                   _T("Verschlüsselungsfelder auswählen"),                           _T("Select Crypto Fields"),                                       },
+   {    MGRUPPE_HIST_BRTG_ENCRYPT_FIELD_CD,               _T("Verschlüsselung starten"),                                    _T("Start Encryption"),                                           },
+   #ifndef __MITARBEITER_CRYPTOUSER__
+   {    MGRUPPE_HIST_BRTG_DECRYPT_DATA_CD,                _T("Chiffrierte Daten sehen"),                                    _T("See encrypted data"),                                         },
+   #endif
+   #ifndef __SAFENET_APPLIANCE__
+   {    MGRUPPE_HIST_BRTG_CRYPTO_ADMIN_CD,                _T("Administration Verschlüsselung"),                             _T("Crypto Administration"),                                      },
+   #endif
+   #endif
+   #ifdef __SCANARCHIVDOKUMENTE__
+   {    MGRUPPE_HIST_BRTG_SCANARCHIVDOKUMENTE_CD,         _T("Belege einscannen"),                                          _T("Scan Output")                                                 },
+   #endif
+   #ifdef __USER_APPROVAL__
+   {    MGRUPPE_HIST_APPROVALNR,                          _T("Approval Nummer"),                                            _T("Approval number")                                             },
+   {    MGRUPPE_HIST_APPROVAL_CD,                         _T("Approval Status"),                                            _T("Approval status")                                             },
+   {    MGRUPPE_HIST_APPROVAL_USER,                       _T("Approval durch"),                                             _T("Approval by")                                                 },
+   {    MGRUPPE_HIST_APPROVAL_DATE,                       _T("Approval am"),                                                _T("Approval on")                                                 },
+   {    MGRUPPE_HIST_APPROVAL_DOCUMENTNR,                 _T("Approval Dokumentennr"),                                      _T("Approval document number")                                    },
+   #endif
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MGRUPPE_HIST_AKTID,                               _T("AktID"),                                                      _T("AktID"),                                                      },
+   {    MGRUPPE_HIST_VALIDID,                             _T("ValidID"),                                                    _T("ValidID"),                                                    },
+   {    MGRUPPE_HIST_VALID_CD,                            _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    MGRUPPE_HIST_VALIDUSER,                           _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   {    MGRUPPE_HIST_FUNKTION,                            _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    MGRUPPE_HIST_HIST_DATUM,                          _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    MGRUPPE_HIST_HIST_USER,                           _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #endif // __MITARBEITER_GRUPPE__
+#endif // __ADMINHISTORY__
+
+ // Unit Access
+ // ***********
+
+   #ifdef __ADMINHISTORY__
+   #ifdef __MITARBEITER_CRYPTOUSER__
+   {    MITARBEITER_ENCRYPTIONKEYS_HIST,                  _T("Encryption Schlüssel Zuweisung History"),                     _T("Encryption Key Allocation History"),                          },
+   {    MEK_HIST_USERID,                                  _T("Mitarbeiter ID"),                                             _T("User ID"),                                                    },
+   {    MEK_HIST_KEY_CD,                                  _T("Encryption key"),                                             _T("Encryption Key"),                                             },
+   {    MEK_HIST_CRTDATUM,                                _T("Erstellt am"),                                                _T("Created on"),                                                 },
+   {    MEK_HIST_CRTUSER,                                 _T("Erstellt durch"),                                             _T("Created by"),                                                 },
+   {    MEK_HIST_MUTDATUM,                                _T("Geändert am"),                                                _T("Modified on"),                                                },
+   {    MEK_HIST_MUTUSER,                                 _T("Geändert durch"),                                             _T("Modified by"),                                                },
+   {    MEK_HIST_FUNKTION,                                _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    MEK_HIST_HIST_DATUM,                              _T("Historisiert am"),                                            _T("Historized on"),                                              },
+   {    MEK_HIST_HIST_USER,                               _T("Historisiert durch"),                                         _T("Historized by"),                                              },
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MEK_HIST_KEYID,                                   _T("Berechtigt auf Key-ID"),                                      _T("Permission on Key-ID"),                                       },
+   {    MEK_HIST_AKTID,                                   _T("AktID"),                                                      _T("AktID"),                                                      },
+   {    MEK_HIST_VALIDID,                                 _T("ValidID"),                                                    _T("ValidID"),                                                    },
+   {    MEK_HIST_VALID_CD,                                _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    MEK_HIST_VALIDUSER,                               _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   #endif // __MITARBEITER_CRYPTOUSER__
+   #ifdef __UNITACCESS__
+   {    UNITACCESS_HIST,                                  _T("Berechtigt auf Team History"),                                _T("Authorization on Team History"),                              },
+   {    UNITACCESS_HIST_USERID,                           _T("UserId"),                                                     _T("UserId"),                                                     },
+   {    UNITACCESS_HIST_UNIT_CD,                          _T("Fachbereich Code"),                                           _T("Team Code"),                                                  },
+   #ifdef __UNITACCESS_NUMMERNKUNDEN__
+   {    UNITACCESS_HIST_NUMMERNKUNDEN_CD,                 _T("Berechtigt auf Nummernkunden"),                               _T("Access on Numbered Accounts"),                                },
+   #endif
+   #ifdef __UNITACCESS_VERTRAULICHKEIT__
+   {    UNITACCESS_HIST_VERTRAULICHKEIT_CD,               _T("Vertraulichkeit"),                                            _T("Security Level")                                              },
+       #ifndef __RBL_WDK__
+         #ifndef __HIV__
+         {    UNITACCESS_HIST_AML_HITS_CD,                _T("Ansicht AML-Hits"),                                           _T("View AML-Hits")                                               },
+         {    UNITACCESS_HIST_AKTENNOTIZEN_CD,            _T("Ansicht Aktennotizen"),                                       _T("View Notes")                                                  },
+         #endif
+       #endif
+   #endif
+   #ifdef __DBL__
+   {    UNITACCESS_HIST_MANDANT_CD,                       _T("Mandant"),                                                    _T("Mandant"),                                                    },
+   {    UNITACCESS_HIST_MANDANT_UNIT_READONLY_CD,         _T("Nur Lesen"),                                                  _T("Nur Lesen"),                                                  },
+   #endif
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    UNITACCESS_HIST_LOESCH_CD,                        _T("Gelöscht"),                                                   _T("Deleted"),                                                    },
+   {    UNITACCESS_HIST_LOESCHDATUM,                      _T("Gelöscht am"),                                                _T("Deleted on"),                                                 },
+   {    UNITACCESS_HIST_LOESCHUSER,                       _T("Gelöscht durch"),                                             _T("Deleted by"),                                                 },
+   {    UNITACCESS_HIST_CRTDAT,                           _T("Erstellt am"),                                                _T("Created on"),                                                 },
+   {    UNITACCESS_HIST_CRTUSER,                          _T("Erstellt durch"),                                             _T("Created by"),                                                 },
+   {    UNITACCESS_HIST_MUTDAT,                           _T("Geändert am"),                                                _T("modified on"),                                                },
+   {    UNITACCESS_HIST_MUTUSER,                          _T("Geändert durch"),                                             _T("modified by"),                                                },
+   {    UNITACCESS_HIST_UNITACCESSID,                     _T("Berechtigt auf Team-ID"),                                     _T("Authorized on Team-ID"),                                      },
+   {    UNITACCESS_HIST_AKTID,                            _T("AktID"),                                                      _T("AktId"),                                                      },
+   {    UNITACCESS_HIST_VALIDID,                          _T("ValidID"),                                                    _T("ValidId"),                                                    },
+   {    UNITACCESS_HIST_VALID_CD,                         _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    UNITACCESS_HIST_VALIDUSER,                        _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #elif defined (__LBLUX_WDK__)
+   {    UNITACCESS_HIST_UNITACCESSID,                     _T("Berechtigt auf Team-ID"),                                     _T("Authorized on Team-ID"),                                      },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   {    UNITACCESS_HIST_FUNKTION,                         _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    UNITACCESS_HIST_HIST_DATUM,                       _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    UNITACCESS_HIST_HIST_USER,                        _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #endif
+
+   #ifdef __BRANCHACCESS__
+   {    FILIALEACCESS_HIST,                               _T("Berechtigt auf Filiale"),                                     _T("Authorization Branch"),                                       },
+   {    FILIALEACCESS_HIST_USERID,                        _T("UserId"),                                                     _T("UserId"),                                                     },
+   {    FILIALEACCESS_HIST_FILIALE_CD,                    _T("Berechtigt auf Filiale"),                                     _T("Branch Code"),                                                },
+   #ifdef __ADMINHISTORY__
+   {    FILIALEACCESS_HIST_LOESCH_CD,                     _T("Gelöscht"),                                                   _T("Deleted"),                                                    },
+   {    FILIALEACCESS_HIST_LOESCHDATUM,                   _T("Gelöscht am"),                                                _T("Deleted on"),                                                 },
+   {    FILIALEACCESS_HIST_LOESCHUSER,                    _T("Gelöscht durch"),                                             _T("Deleted by"),                                                 },
+   {    FILIALEACCESS_HIST_CRTDAT,                        _T("Erstellt am"),                                                _T("Created on"),                                                 },
+   {    FILIALEACCESS_HIST_CRTUSER,                       _T("Erstellt durch"),                                             _T("Created by"),                                                 },
+   {    FILIALEACCESS_HIST_MUTDAT,                        _T("Geändert am"),                                                _T("modified on"),                                                },
+   {    FILIALEACCESS_HIST_MUTUSER,                       _T("Geändert durch"),                                             _T("modified by"),                                                },
+   #endif // __ADMINHISTORY__
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    FILIALEACCESS_HIST_AKTID,                         _T("AktID"),                                                      _T("AktId"),                                                      },
+   {    FILIALEACCESS_HIST_VALIDID,                       _T("ValidID"),                                                    _T("ValidId"),                                                    },
+   {    FILIALEACCESS_HIST_VALID_CD,                      _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    FILIALEACCESS_HIST_VALIDUSER,                     _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   {    FILIALEACCESS_HIST_FILIALEACCESSID,               _T("Berechtigt auf Filiale-ID"),                                  _T("Authorized on Team-ID"),                                      },
+   {    FILIALEACCESS_HIST_FUNKTION,                      _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    FILIALEACCESS_HIST_HIST_DATUM,                    _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    FILIALEACCESS_HIST_HIST_USER,                     _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #endif
+
+      // AML-Hits
+      // ********
+
+   #if defined (__AML_HITS__) || defined (__FATCA_HITS_WEG_EXT__)
+   {    MITARBEITER_HITACCESS_HIST,                       _T("Berechtigt auf Hits von Acc. Mgr. History"),                  _T("Grant Access on Hits of Acc. Mgr. History")               },
+   {    MITARBEITER_HITACCESS_HIST_USERID,                _T("UserId"),                                                     _T("UserId")                                                  },
+   {    MITARBEITER_HITACCESS_HIST_SACHBEARB_CD,          _T("Berechtigt auf Hits von Acc. Mgr."),                          _T("Grant Access on Hits of Acc. Mgr.")                       },
+   {    MITARBEITER_HITACCESS_HIST_FUNKTION,              _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    MITARBEITER_HITACCESS_HIST_HIST_DATUM,            _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    MITARBEITER_HITACCESS_HIST_HIST_USER,             _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #if defined (__ADMINHISTORY_X__) || defined (__ADMINHISTORY__)
+   {    MITARBEITER_HITACCESS_HIST_LOESCH_CD,             _T("Gelöscht"),                                                   _T("Deleted"),                                                    },
+   {    MITARBEITER_HITACCESS_HIST_LOESCHDATUM,           _T("Gelöscht am"),                                                _T("Deleted on"),                                                 },
+   {    MITARBEITER_HITACCESS_HIST_LOESCHUSER,            _T("Gelöscht durch"),                                             _T("Deleted by"),                                                 },
+   {    MITARBEITER_HITACCESS_HIST_CRTDAT,                _T("Erstellt am"),                                                _T("Created on"),                                                 },
+   {    MITARBEITER_HITACCESS_HIST_CRTUSER,               _T("Erstellt durch"),                                             _T("Created by"),                                                 },
+   {    MITARBEITER_HITACCESS_HIST_MUTDAT,                _T("Geändert am"),                                                _T("modified on"),                                                },
+   {    MITARBEITER_HITACCESS_HIST_MUTUSER,               _T("Geändert durch"),                                             _T("modified by"),                                                },
+   #endif
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MITARBEITER_HITACCESS_HIST_HITACCESSID,           _T("Berechtigt auf Hit-ID"),                                      _T("Authorized on Hit-ID"),                                       },
+   {    MITARBEITER_HITACCESS_HIST_AKTID,                 _T("AktID"),                                                      _T("AktId"),                                                      },
+   {    MITARBEITER_HITACCESS_HIST_VALIDID,               _T("ValidID"),                                                    _T("ValidId"),                                                    },
+   {    MITARBEITER_HITACCESS_HIST_VALID_CD,              _T("Validierungs Status"),                                        _T("Validation Status"),                                          },
+   {    MITARBEITER_HITACCESS_HIST_VALIDUSER,             _T("Validiert durch"),                                            _T("Validated by"),                                               },
+   #endif
+   #endif
+
+   #ifdef __HOSTUSER__
+   {    HOSTUSER_HIST,                                    _T("Hosts/Benutzer History"),                                     _T("User/Host/OS-User Assignment"),                               },
+   {    HOSTUSER_HIST_USERID,                             _T("UserId"),                                                     _T("UserId"),                                                     },
+   {    HOSTUSER_HIST_OS_USER,                            _T("BS User"),                                                    _T("OS-User"),                                                    },
+   {    HOSTUSER_HIST_COMPUTERNAME,                       _T("Rechnername"),                                                _T("Host"),                                                       },
+   {    HOSTUSER_HIST_CRTDATUM,                           _T("Eröffnet am"),                                                _T("Created on")                                              },
+   {    HOSTUSER_HIST_CRTUSER,                            _T("Eröffnet durch"),                                             _T("Created by")                                              },
+   {    HOSTUSER_HIST_MUTDATUM,                           _T("Geändert am"),                                                _T("Modified on")                                             },
+   {    HOSTUSER_HIST_MUTUSER,                            _T("Geändert durch"),                                             _T("Modified by")                                             },
+   {    HOSTUSER_HIST_FUNKTION,                           _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    HOSTUSER_HIST_HIST_DATUM,                         _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    HOSTUSER_HIST_HIST_USER,                          _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #endif
+   #endif
+
+   #ifdef __FILIALEACCESS__
+   {    GRUPPENFILIALEACCESS_HIST,                        _T("Berechtigt auf Filiale History"),                             _T("Authorized on Branch History"),                               },
+   {    GRUPPENFILIALEACCESS_HIST_GRUPPEID,               _T("GruppeId"),                                                   _T("GroupId"),                                                    },
+   {    GRUPPENFILIALEACCESS_HIST_FILIALE_CD,             _T("Berechtigt auf Filiale"),                                     _T("Authorized on Branch"),                                       },
+   {    GRUPPENFILIALEACCESS_HIST_FUNKTION,               _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    GRUPPENFILIALEACCESS_HIST_HIST_DATUM,             _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    GRUPPENFILIALEACCESS_HIST_HIST_USER,              _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+   #endif
+
+// Dokumentenart Einschränkung
+// ***************************
+
+   #ifdef __MITARBEITER_DOKUMENTENART_EINSCHRAENKUNG__
+   #ifdef __MITARBEITER_GRUPPE__
+
+// Mitarbeitergruppe Dokumentenart Zuweisung
+// *****************************************
+
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST,                    _T("Mitarbeiter Gruppe Dokumentenart Zuweisung History"),         _T("Users Group Document Type Assignment History")            },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_ZUWEISUNGSID,       _T("Zuweisungs-Id"),                                              _T("Assignment Id")                                           },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_GRUPPEID,           _T("Gruppen-Id"),                                                 _T("Group Id")                                                },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_DOKUMENT_CD,        _T("Dokumentenart"),                                              _T("Document Type")                                           },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_CRTDATUM,           _T("Eröffnet am"),                                                _T("Created on")                                              },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_CRTUSER,            _T("Eröffnet durch"),                                             _T("Created by")                                              },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_MUTDATUM,           _T("Geändert am"),                                                _T("Modified on")                                             },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_MUTUSER,            _T("Geändert durch"),                                             _T("Modified by")                                             },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_FUNKTION,           _T("Funktion"),                                                   _T("Function"),                                               },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_HIST_DATUM,         _T("Historisiert am"),                                            _T("Audit Logged on"),                                        },
+   {    MITARB_GR_DOKUART_ZUWEIS_HIST_HIST_USER,          _T("Historisiert durch"),                                         _T("Audit Logged by"),                                        },
+
+   #else
+
+// Mitarbeiter Dokumentenart Zuweisung
+// ***********************************
+
+   #endif
+   #endif
+
+// Report Einschränkung
+// ********************
+
+   #ifdef __MITARBEITER_REPORT_EINSCHRAENKUNG__
+   #ifdef __MITARBEITER_GRUPPE__
+
+// Mitarbeitergruppe Report Zuweisung
+// **********************************
+
+   {    MITARB_GR_REPORT_ZUWEIS_HIST,                     _T("Mitarbeiter Gruppe Report Zuweisung History"),                _T("Users Group Report Type Assignment"),                         },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_ZUWEISUNGSID,        _T("Zuweisungs-Id"),                                              _T("Assignment Id"),                                              },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_GRUPPEID,            _T("Gruppen-Id"),                                                 _T("Group Id"),                                                   },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_REPORT_CD,           _T("Report"),                                                     _T("Report Type"),                                                },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_CRTDATUM,            _T("Eröffnet am"),                                                _T("Created on"),                                                 },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_CRTUSER,             _T("Eröffnet durch"),                                             _T("Created by"),                                                 },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_MUTDATUM,            _T("Geändert am"),                                                _T("Modified on"),                                                },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_MUTUSER,             _T("Geändert durch"),                                             _T("Modified by"),                                                },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_FUNKTION,            _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_HIST_DATUM,          _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    MITARB_GR_REPORT_ZUWEIS_HIST_HIST_USER,           _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+
+   #else
+
+// Mitarbeiter Report Zuweisung
+// ****************************
+
+   #endif // __MITARBEITER_GRUPPE__
+   #endif // __MITARBEITER_REPORT_EINSCHRAENKUNG__
+
+// Kundentyp Einschränkung
+// ***********************
+
+   #ifdef __MITARBEITER_KUNDENTYP_EINSCHRAENKUNG__
+   #ifdef __MITARBEITER_GRUPPE__
+
+// Mitarbeitergruppe Kundentyp Zuweisung
+// *************************************
+
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST,                     _T("Mitarbeiter Gruppe Kundentyp Zuweisung History"),                _T("Users Group Client Type Assignment"),                         },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_ZUWEISUNGSID,        _T("Zuweisungs-Id"),                                              _T("Assignment Id"),                                              },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_GRUPPEID,            _T("Gruppen-Id"),                                                 _T("Group Id"),                                                   },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_KUNDENTYP_CD,           _T("Kundentyp"),                                                     _T("Client Type"),                                                },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_CRTDATUM,            _T("Eröffnet am"),                                                _T("Created on"),                                                 },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_CRTUSER,             _T("Eröffnet durch"),                                             _T("Created by"),                                                 },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_MUTDATUM,            _T("Geändert am"),                                                _T("Modified on"),                                                },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_MUTUSER,             _T("Geändert durch"),                                             _T("Modified by"),                                                },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_FUNKTION,            _T("Funktion"),                                                   _T("Function"),                                                   },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_HIST_DATUM,          _T("Historisiert am"),                                            _T("Audit Logged on"),                                            },
+   {    MITARB_GR_KUNDENTYP_ZUWEIS_HIST_HIST_USER,           _T("Historisiert durch"),                                         _T("Audit Logged by"),                                            },
+
+   #else
+
+// Mitarbeiter Kundentyp Zuweisung
+// *******************************
+
+   #endif // __MITARBEITER_GRUPPE__
+   #endif // __MITARBEITER_KUNDENTYP_EINSCHRAENKUNG__
+
+// GxDid Berechtigung
+// ******************
+
+   #ifdef __GXDID_BERECHTIGUNG__
+   #ifdef __MITARBEITER_GRUPPE__
+
+// Mitarbeitergruppe GxDid Zuweisung
+// *********************************
+
+   {    MITARB_GR_GXDID_ZUWEIS_HIST,                      _T("Mitarbeiter Gruppe GxDid Zuweisung History"),                 _T("Users Group GxDid Assignment")                            },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_ZUWEISUNGSID,         _T("Zuweisungs-Id"),                                              _T("Assignment Id")                                           },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_GRUPPEID,             _T("Gruppen-Id"),                                                 _T("Group Id")                                                },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_GXDID,                _T("GxDialog-Id"),                                                _T("GxDialog Id")                                             },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_CRTDATUM,             _T("Eröffnet am"),                                                _T("Created on")                                              },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_CRTUSER,              _T("Eröffnet durch"),                                             _T("Created by")                                              },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_MUTDATUM,             _T("Geändert am"),                                                _T("Modified on")                                             },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_MUTUSER,              _T("Geändert durch"),                                             _T("Modified by")                                             },
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_AKTID,                _T("AktID"),                                                      _T("AktID")                                                   },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_VALIDID,              _T("ValidID"),                                                    _T("ValidID")                                                 },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_VALID_CD,             _T("Validierungs Status"),                                        _T("Validation Status")                                       },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_VALIDUSER,            _T("Validiert durch"),                                            _T("Validated by")                                            },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_FUNKTION,             _T("Funktion"),                                                                                                                 },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_HIST_DATUM,           _T("Historisiert am"),                                                                                                          },
+   {    MITARB_GR_GXDID_ZUWEIS_HIST_HIST_USER,            _T("Historisiert durch"),                                                                                                       },
+   #else // __MITARBEITER_GRUPPE__
+
+// Mitarbeiter GxDid Zuweisung
+// ***************************
+
+   {    MITARBEITER_GXDID_ZUWEIS_HIST,                      _T("Mitarbeiter Gruppe GxDid Zuweisung History"),                 _T("Users Group GxDid Assignment")                            },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_ZUWEISUNGSID,         _T("Zuweisungs-Id"),                                              _T("Assignment Id")                                           },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_USERID,               _T("User-Id"),                                                    _T("UserId")                                                  },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_GXDID,                _T("GxDialog-Id"),                                                _T("GxDialog Id")                                             },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_CRTDATUM,             _T("Eröffnet am"),                                                _T("Created on")                                              },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_CRTUSER,              _T("Eröffnet durch"),                                             _T("Created by")                                              },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_MUTDATUM,             _T("Geändert am"),                                                _T("Modified on")                                             },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_MUTUSER,              _T("Geändert durch"),                                             _T("Modified by")                                             },
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_AKTID,                _T("AktID"),                                                      _T("AktID")                                                   },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_VALIDID,              _T("ValidID"),                                                    _T("ValidID")                                                 },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_VALID_CD,             _T("Validierungs Status"),                                        _T("Validation Status")                                       },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_VALIDUSER,            _T("Validiert durch"),                                            _T("Validated by")                                            },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_FUNKTION,             _T("Funktion"),                                                                                                                 },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_HIST_DATUM,           _T("Historisiert am"),                                                                                                          },
+   {    MITARBEITER_GXDID_ZUWEIS_HIST_HIST_USER,            _T("Historisiert durch"),                                                                                                       },
+
+   #endif // __MITARBEITER_GRUPPE__
+   #endif // __GXDID_BERECHTIGUNG__
+
+
+   #ifdef __MITARBEITER_SUBGROUP__
+   {    MITARBEITER_SUBGROUP_HIST,                          _T("Mitarbeiter Subgruppe History"),                            _T("Users Subgroup History")                                  },
+   {    MITARBEITER_SUBGROUP_HIST_SUBGROUP_ID,              _T("SubGruppeId"),                                              _T("Subgroup Id")                                             },
+   {    MITARBEITER_SUBGROUP_HIST_DESCRIPTION,              _T("SubGruppe"),                                                _T("Subgroup")                                                },
+   {    MITARBEITER_SUBGROUP_HIST_IS_DEFAULT,               _T("Default Gruppe"),                                           _T("Default Subgroup")                                        },
+   {    MITARBEITER_SUBGROUP_HIST_CRTDATUM,                 _T("Erstellt am"),                                              _T("Subgroup Opened on")                                      },
+   {    MITARBEITER_SUBGROUP_HIST_CRTUSER,                  _T("Erstellt durch"),                                           _T("Subgroup Opened by")                                      },
+   {    MITARBEITER_SUBGROUP_HIST_MUTDATUM,                 _T("Geändert am"),                                              _T("Subgroup Modified on")                                    },
+   {    MITARBEITER_SUBGROUP_HIST_MUTUSER,                  _T("Geändert durch"),                                           _T("Subgroup Modified by")                                    },
+   {    MITARBEITER_SUBGROUP_HIST_LOESCH_CD,                _T("Gelöscht"),                                                 _T("Subgroup Closed")                                         },
+   {    MITARBEITER_SUBGROUP_HIST_LOESCHDATUM,              _T("Gelöscht am"),                                              _T("Subgroup Closed on")                                      },
+   {    MITARBEITER_SUBGROUP_HIST_LOESCHUSER,               _T("Gelöscht durch"),                                           _T("Subgroup Deleted by")                                     },
+   {    MITARBEITER_SUBGROUP_HIST_FUNKTION,                 _T("Funktion"),                                                                                                               },
+   {    MITARBEITER_SUBGROUP_HIST_HIST_DATUM,               _T("Historisiert am"),                                                                                                        },
+   {    MITARBEITER_SUBGROUP_HIST_HIST_USER,                _T("Historisiert durch"),                                                                                                     },
+   #ifdef __VALIDIERUNG_MITARBEITER__
+   {    MITARBEITER_SUBGROUP_HIST_AKTID,                    _T("AktID"),                                                    _T("AktID")                                                   },
+   {    MITARBEITER_SUBGROUP_HIST_VALIDID,                  _T("ValidID"),                                                  _T("ValidID")                                                 },
+   {    MITARBEITER_SUBGROUP_HIST_VALID_CD,                 _T("Validierungs Status"),                                      _T("Validation Status")                                       },
+   {    MITARBEITER_SUBGROUP_HIST_VALIDUSER,                _T("Validiert durch"),                                          _T("Validated by")                                            },
+   #endif // __VALIDIERUNG_MITARBEITER__
+   #endif // __MITARBEITER_SUBGROUP__

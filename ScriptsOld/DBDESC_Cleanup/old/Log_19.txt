@@ -1,0 +1,16 @@
+Add Zusatz to *DBDESC*.CPP files (2014-08-04 15:31:14)
+Start Directory: C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\dbdesc.cpp - 4 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescAdmin.cpp - 1333 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescAdminHistory.cpp - 1176 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescCommon.cpp - 1579 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescHistory.cpp - 465 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescMitarbeiter.cpp - 146 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescMitarbeiterHistory.cpp - 122 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescObjectField.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescObjectTable.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescObjectUtils.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescProject.cpp - 2 lines replaced
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbdescQFlagInclude.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescSQLStr.cpp - No change
+C:\Projects\SunGard\sungard\windekis\Genix\BOWARE32\WinDekis\Source\DbDescWorldCheck.cpp - 143 lines replaced
