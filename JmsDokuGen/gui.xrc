@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="mainFrame">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>444,300</size>
+		<title></title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxFlexGridSizer">
+			<rows>0</rows>
+			<cols>2</cols>
+			<vgap>0</vgap>
+			<hgap>0</hgap>
+			<growablecols>1</growablecols>
+			<growablerows></growablerows>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxALIGN_RIGHT</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="m_txt_db">
+					<label>Database</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="m_textCtrl_db">
+					<value>lp077</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxALIGN_RIGHT</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="m_txt_user">
+					<label>User name</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="m_textCtrl_user">
+					<value>AMBIT__CIM</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxALIGN_RIGHT</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="m_txt_pw">
+					<label>Password</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="m_textCtrl_pw">
+					<style>wxTE_PASSWORD</style>
+					<value>AMBIT__CIM</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxALIGN_RIGHT</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="m_txt_dest">
+					<label>Destination</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="m_textCtrl_dest">
+					<value>MYDESK</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxALIGN_RIGHT</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="m_txt_file">
+					<label>Filename</label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="m_textCtr_file">
+					<value>test.xlsx</value>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="m_txt_empty">
+					<label></label>
+					<wrap>-1</wrap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxCheckBox" name="m_check_gen_ins">
+					<label>Generate insert statements</label>
+					<checked>0</checked>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxButton" name="m_button_start">
+					<label>Start</label>
+					<default>0</default>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>
