@@ -1,0 +1,91 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.zipx
+
+# Logs and databases #
+######################
+*.log
+*.bad
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+~* 
+
+# Embarcadero #
+###############
+*.obj
+*.csm
+*.tds
+*.drc
+*.~de
+*.dsw
+*.map
+*.met
+*.mlt
+*.res
+*.obr
+*.local
+*.dsk
+*.xls
+*.status
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.pch
+OUT32/
+out32/
+Out32/
+*.*.local
+__history/
+*.~*
+*.#*
+
+# Office / PDF #
+################
+*.doc
+*.dot
+*.docx
+*.docm
+*.dotx
+*.dotm
+*.docb
+*.xls
+*.xlsx
+*.xlsm
+*.xltx
+*.chm
+*.ppt
+*.pptx
+*.pdf
+
+# Git merge backup
+##################
+*.orig
+*.rej

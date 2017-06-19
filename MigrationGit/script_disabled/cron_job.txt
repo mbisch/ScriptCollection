@@ -1,0 +1,3 @@
+#CVS2GIT Migration
+00 23 * * * /home/mbisch/script/run_full_mig.sh > /home/mbisch/script/logs/Full.log 2>&1
+
